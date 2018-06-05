@@ -1,0 +1,98 @@
+body,
+div,
+span,
+iframe,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+big,
+cite,
+code,
+em,
+img,
+ins,
+q,
+s,
+small,
+strong,
+u,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+canvas,
+footer,
+header,
+menu,
+nav,
+input {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  box-sizing: border-box;
+  border: 1px solid lightblue;
+}
+
+.container {
+    flex-direction: column;
+    min-height: 98vh;
+    border: 1px solid red;
+    font-family: Roboto, sans-serif;
+    font-weight: 100;
+}
+
+.header {
+    flex-direction: column;
+    background: #3C4146;
+    color: #FFFFFF;
+    height: 7vmin;
+}
+
+.header__icon {
+    height: 100%;
+    width: 4%;
+    background: url('../assets/search_cat.png') no-repeat;
+    background-size: contain;
+    margin-left: 6%;
+}
+
+.header__logo {
+    
+}
+
+.main {
+    flex: 1;
+}
+
+.footer {
+    height: 5vmin;
+    background: #3C4146;
+    color: #FFFFFF;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5vmin;
+}
+
