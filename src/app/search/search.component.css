@@ -57,23 +57,48 @@ input {
 }
 
 .search-page {
-    height: 85vh;
-    flex-direction: column;
-    align-items: center;
+  height: 85vh;
+  flex-direction: column;
+  align-items: center;
 }
 
 .search__criteria-group {
-    width: 80%;
-    height: 15%;
+  width: 80%;
+  height: 15%;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5vmin;
 }
 
 .criteria__type {
-    
+  height: 30%;
+  width: 20%;
+  border-bottom: 1px solid #0366d6;
+  align-items: center;
 }
 
-
+.criteria__language {
+  height: 30%;
+  width: 20%;
+  border-bottom: 1px solid #0366d6;
+  align-items: center;
+}
+.criteria__text {
+  height: 30%;
+  width: 35%;
+  border-bottom: 2px solid #0366d6;
+  align-items: center;
+}
+.search__button {
+  height: 30%;
+  width: 13%;
+  background: #0366d6;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
 
 .search__results-group {
-    width: 80%;
-    height: 85%;
+  width: 80%;
+  height: 85%;
 }
