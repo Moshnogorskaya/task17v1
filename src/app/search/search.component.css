@@ -54,6 +54,7 @@ select {
   margin: 0;
   display: flex;
   box-sizing: border-box;
+  border: none;
 }
 
 .search-page {
@@ -83,6 +84,7 @@ select {
   width: 20%;
   border-bottom: 1px solid #0366d6;
   align-items: center;
+  background: white;
 }
 .criteria__text {
   height: 50%;
