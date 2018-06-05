@@ -48,12 +48,12 @@ footer,
 header,
 menu,
 nav,
-input {
+input,
+select {
   padding: 0;
   margin: 0;
   display: flex;
   box-sizing: border-box;
-  border: 1px solid lightblue;
 }
 
 .search-page {
@@ -64,33 +64,34 @@ input {
 
 .search__criteria-group {
   width: 80%;
-  height: 15%;
+  height: 7%;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   font-size: 1.5vmin;
 }
 
 .criteria__type {
-  height: 30%;
+  height: 50%;
   width: 20%;
+  background: white;
   border-bottom: 1px solid #0366d6;
   align-items: center;
 }
 
 .criteria__language {
-  height: 30%;
+  height: 50%;
   width: 20%;
   border-bottom: 1px solid #0366d6;
   align-items: center;
 }
 .criteria__text {
-  height: 30%;
+  height: 50%;
   width: 35%;
   border-bottom: 2px solid #0366d6;
   align-items: center;
 }
 .search__button {
-  height: 30%;
+  height: 50%;
   width: 13%;
   background: #0366d6;
   color: white;
@@ -102,12 +103,12 @@ input {
 
 .search__results-group {
   width: 80%;
-  height: 85%;
+  height: 93%;
   flex-direction: column;
 }
 
 .results__view-toggle {
-height: 7%;
+height: 15%;
 justify-content: flex-end;
 font-size: 4vmin;
 }
@@ -128,6 +129,40 @@ font-size: 4vmin;
 
 .results__list {
     height: 93%;
+    flex-direction: column;
+}
+
+.repo {
+  justify-content: space-between;
+  height: 25%;
+  border-top: 1px solid #E1E4E8;
+}
+.repo__info {
+ flex-direction: column;
+ justify-content: center;
+}
+
+.repo__name {
+color: #0366D6;
+font-size: 2.5vmin;
+font-weight: normal;
+}
+.repo__description {
+  font-size: 1.5vmin;
+}
+
+.repo__stats {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.repo__stars {
+
+}
+.repo__language {
+  color: #999999;
+  font-size: 1.5vmin;
 }
 
 

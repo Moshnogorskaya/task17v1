@@ -1,20 +1,51 @@
 <div class='search-page'>
 
   <form class='search__criteria-group criteria'>
-    <div class='criteria__type'>Repositories</div>
-    <div class='criteria__language'>Javascript</div>
-    <div class='criteria__text'>CMS</div>
-    <div class='search__button'>SEARCH</div>
+
+    <select class='criteria__type'>
+      <option disabled>Type</option>
+      <option value='Repositories'>Repositories</option>
+    </select>
+
+    <select class='criteria__language'>
+        <option disabled>Language</option>
+        <option value='Javascript'>Javascript</option>
+        <option value='CSS'>CSS</option>
+        <option value='HTML'>HTML</option>
+        <option value='PHP'>PHP</option>
+        <option value='Ruby'>Ruby</option>
+        <option value='C++'>C++</option>
+        <option value='Python'>Python</option>
+        <option value='C#'>C#</option>
+        <option value='Java'>Java</option>
+        <option value='Go'>Go</option>
+        <option value='Haskell'>Haskell</option>
+    </select>
+
+    <input type='text' class='criteria__text' placeholder='Type here for search'>
+    
+    <button class='search__button'>SEARCH</button>
+ 
   </form>
 
   <div class='search__results-group results'>
     <div class='results__view-toggle view'>
-      <a class='view__dashboard dashboard'>a
-      </a>
-      <a class='view__list'>a
-      </a>
+      <a class='view__dashboard dashboard'>a</a>
+      <a class='view__list'>a</a>
     </div>
-    <div class='results__list'></div>
+    <ul class='results__list'>
+      <li class='repo'>
+        <div class='repo__info'>
+          <h1 class='repo__name'>{{repo.name}}</h1>
+          <p class='repo__description'>{{repo.description}}</p>
+        </div>
+        <div class='repo__stats'>
+          <div class='repo__stars'>{{repo.stargazers_count}}</div>
+          <div class='repo__language'>{{repo.language}}</div>
+        </div>
+      </li>
+      
+    </ul>
   </div>
 
-</div>❖
+</div>
