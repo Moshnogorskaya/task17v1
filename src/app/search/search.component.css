@@ -1,3 +1,79 @@
+body,
+div,
+span,
+iframe,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+big,
+cite,
+code,
+em,
+img,
+ins,
+q,
+s,
+small,
+strong,
+u,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+canvas,
+footer,
+header,
+menu,
+nav,
+input {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  box-sizing: border-box;
+  border: 1px solid lightblue;
+}
+
 .search-page {
     height: 85vh;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search__criteria-group {
+    width: 80%;
+    height: 15%;
+}
+
+.criteria__type {
+    
+}
+
+
+
+.search__results-group {
+    width: 80%;
+    height: 85%;
 }
