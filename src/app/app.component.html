@@ -11,12 +11,12 @@
     </div>
 
     <div class=nav-group>
-      <a class='header__search-link'>Search</a>
-      <a class='header__my-list-link'>My List</a>
+      <a routerLink="/search" class='header__search-link'>Search</a>
+      <a routerLink="/my-list" class='header__my-list-link'>My List</a>
     </div>
   </div>
 
-  <div class='main'></div>
+  <router-outlet class='main'></router-outlet>
 
   <div class='footer'>copyright @lodossteam 2018</div>
 

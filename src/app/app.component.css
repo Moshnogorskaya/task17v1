@@ -106,14 +106,17 @@ justify-content: center;
     align-items: center;
 }
 
-.header__my-list-link {
-    margin: 0 5% 0 3%;
+.header__my-list-link,
+.header__search-link {
+    margin-right: 5%;
     align-items: center;
+    color: #FFFFFF;
+    text-decoration: none;
 }
 
-
-.main {
-    flex: 1;
+.header__my-list-link:hover,
+.header__search-link:hover {
+   color: #B3BCC7;
 }
 
 .footer {
