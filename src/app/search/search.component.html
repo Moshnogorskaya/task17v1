@@ -2,7 +2,7 @@
 
   <form class='search__criteria-group criteria'>
 
-    <select class='criteria__type'>
+    <select #type (blur)='update(type.value)' class='criteria__type'>
       <option disabled>Type</option>
       <option value='Repositories'>Repositories</option>
     </select>

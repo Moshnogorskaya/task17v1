@@ -14,6 +14,8 @@ export class RepoService {
 
   constructor(private http: HttpClient) { }
 
+  getURLString(): any {}
+
   getRepos(): Observable<Repo[]> {
     return this.http
       .get<any>(this.reposUrl)

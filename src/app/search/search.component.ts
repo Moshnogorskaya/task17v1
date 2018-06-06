@@ -16,6 +16,13 @@ export class SearchComponent implements OnInit {
         .subscribe(repos => this.repos = repos);
     }
 
+    update(value: string){
+      console.log(value);
+      return value;
+    }
+    getURL(): string {
+      return 'hi';
+    }
 
   ngOnInit() {
     this.getRepos();
