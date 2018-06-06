@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Repo } from '../repo';
 import { REPOS } from '../mock-repos';
+import { RepoService } from '../repo.service';
 
 @Component({
   selector: 'app-search',
@@ -8,17 +9,22 @@ import { REPOS } from '../mock-repos';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
-  repos = REPOS;
-  onRefreshSearch(): boolean {
-    console.log('search button click');
-    this.repos = REPOS;
-    return false;
-  }
+  repos: Repo[];
 
+  constructor(private repoService: RepoService) { }
+    getRepos(): void {
+      this.repos = this.repoService.getRepos();
+    }
 
-  constructor() { }
 
   ngOnInit() {
+    this.getRepos();
+  }
+
+  onRefreshSearch(): boolean {
+    console.log('search button click');
+    this.getRepos();
+    return false;
   }
 
 }
