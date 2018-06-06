@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Repo } from '../repo';
-import { RepoService } from '../repo.service';
 
 @Component({
   selector: 'app-results',
@@ -25,7 +23,4 @@ export class ResultsComponent implements OnInit {
   ngOnInit() {
     this.onClickList();
   }
-
-
-
 }

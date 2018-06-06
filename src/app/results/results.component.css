@@ -82,39 +82,3 @@ select {
 .view__list.active {
   color: red;
 }
-
-.results__list {
-  flex-direction: column;
-}
-
-.repo {
-  justify-content: space-between;
-  min-height: 15vmin;
-  border-top: 1px solid #e1e4e8;
-}
-.repo__info {
-  flex-direction: column;
-  justify-content: center;
-}
-
-.repo__name {
-  color: #0366d6;
-  font-size: 2.5vmin;
-  font-weight: normal;
-}
-.repo__description {
-  font-size: 1.5vmin;
-}
-
-.repo__stats {
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.repo__stars {
-}
-.repo__language {
-  color: #999999;
-  font-size: 1.5vmin;
-}

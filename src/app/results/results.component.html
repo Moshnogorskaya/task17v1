@@ -4,15 +4,4 @@
     <a (click)='onClickList()' class='view__list' [class.active]='isList'>List</a>
   </div>
 
-  <ul class='results__list'>
-    <li *ngFor="let repo of repos" class='repo'>
-      <div class='repo__info'>
-        <h1 class='repo__name'>{{repo.name}}</h1>
-        <p class='repo__description'>{{repo.description}}</p>
-      </div>
-      <div class='repo__stats'>
-        <div class='repo__stars'>{{repo.stargazers_count}}</div>
-        <div class='repo__language'>{{repo.language}}</div>
-      </div>
-    </li>      
-  </ul>
+  <app-list *ngIf='isList' [repos]='repos'></app-list>
