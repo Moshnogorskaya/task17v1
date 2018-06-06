@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/search', pathMatch: 'full' },
   { path: 'search', component: SearchComponent },
   { path: 'my-list', component: AppComponent }
 ];
