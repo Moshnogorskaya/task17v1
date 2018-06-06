@@ -18,10 +18,6 @@ export class SearchComponent implements OnInit {
 
   constructor(private repoService: RepoService) {}
 
-  reposCheck(): number {
-    return this.repos.length;
-  }
-
   updateType(value: string): void {
     this.type = value.toLowerCase();
   }
@@ -32,6 +28,11 @@ export class SearchComponent implements OnInit {
 
   updateSearchTerm(value: string): void {
     this.searchTerm = value.toLowerCase();
+  }
+
+  checkRepos(): any{
+   if (this.repos && this.repos.length) return true;
+   return false;
   }
 
   getRepos(): boolean {
@@ -46,6 +47,5 @@ export class SearchComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getRepos();
   }
 }
