@@ -10,13 +10,15 @@ import { RepoService } from '../repo.service';
 })
 export class ResultsComponent implements OnInit {
 
+  isList: boolean = true;
+
   onClickList(): any {
-    console.log('list!');
-    return true;
+    this.isList = true;
+    console.log('list!', 'islist =', this.isList)
   }
   onClickTile(): any {
-    console.log('tile!')
-    return true;
+    this.isList = false;
+    console.log('tile!', 'islist =', this.isList)
   }
 
   constructor() { }
