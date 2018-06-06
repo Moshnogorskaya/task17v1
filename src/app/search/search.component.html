@@ -24,7 +24,7 @@
 
     <input type='text' class='criteria__text' placeholder='Type here for search'>
     
-    <button class='search__button'>SEARCH</button>
+    <button (click)='onRefreshSearch()' class='search__button'>SEARCH</button>
  
   </form>
 
@@ -33,8 +33,9 @@
       <a class='view__dashboard dashboard'>a</a>
       <a class='view__list'>a</a>
     </div>
+
     <ul class='results__list'>
-      <li class='repo'>
+      <li *ngFor="let repo of repos" class='repo'>
         <div class='repo__info'>
           <h1 class='repo__name'>{{repo.name}}</h1>
           <p class='repo__description'>{{repo.description}}</p>
@@ -43,8 +44,7 @@
           <div class='repo__stars'>{{repo.stargazers_count}}</div>
           <div class='repo__language'>{{repo.language}}</div>
         </div>
-      </li>
-      
+      </li>      
     </ul>
   </div>
 

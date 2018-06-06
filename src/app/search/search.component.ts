@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Repo } from '../repo';
+import { REPOS } from '../mock-repos';
 
 @Component({
   selector: 'app-search',
@@ -7,14 +8,14 @@ import { Repo } from '../repo';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
-  repo: Repo = {
-    id: 1,
-    name: 'Windstorm',
-    description: 'description',
-    language: 'javascript',
-    html_url: '#',
-    stargazers_count: 5
-  };
+  repos = REPOS;
+  onRefreshSearch(): boolean {
+    console.log('search button click');
+    this.repos = REPOS;
+    return false;
+  }
+
+
   constructor() { }
 
   ngOnInit() {

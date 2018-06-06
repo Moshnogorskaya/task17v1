@@ -58,21 +58,20 @@ select {
 }
 
 .search-page {
-  height: 85vh;
   flex-direction: column;
   align-items: center;
 }
 
 .search__criteria-group {
   width: 80%;
-  height: 7%;
+  min-height: 7vmin;
   justify-content: space-between;
   align-items: flex-end;
   font-size: 1.5vmin;
 }
 
 .criteria__type {
-  height: 50%;
+  height: 3vmin;
   width: 20%;
   background: white;
   border-bottom: 1px solid #0366d6;
@@ -80,20 +79,20 @@ select {
 }
 
 .criteria__language {
-  height: 50%;
+  height: 3vmin;
   width: 20%;
   border-bottom: 1px solid #0366d6;
   align-items: center;
   background: white;
 }
 .criteria__text {
-  height: 50%;
+  height: 3vmin;
   width: 35%;
   border-bottom: 2px solid #0366d6;
   align-items: center;
 }
 .search__button {
-  height: 50%;
+  height: 3vmin;
   width: 13%;
   background: #0366d6;
   color: white;
@@ -101,53 +100,50 @@ select {
   align-items: center;
 }
 
-             /* results */
+/* results */
 
 .search__results-group {
   width: 80%;
-  height: 93%;
   flex-direction: column;
 }
 
 .results__view-toggle {
-height: 15%;
-justify-content: flex-end;
-font-size: 4vmin;
+  min-height: 15vmin;
+  justify-content: flex-end;
+  font-size: 4vmin;
 }
 
 .view__dashboard {
-width: 10%;
-justify-content: center;
-align-items: center;
+  width: 10%;
+  justify-content: center;
+  align-items: center;
 }
 
-
 .view__list {
-    width: 10%;
-    justify-content: center;
-align-items: center;
-font-size: 4vmin;
+  width: 10%;
+  justify-content: center;
+  align-items: center;
+  font-size: 4vmin;
 }
 
 .results__list {
-    height: 93%;
-    flex-direction: column;
+  flex-direction: column;
 }
 
 .repo {
   justify-content: space-between;
-  height: 25%;
-  border-top: 1px solid #E1E4E8;
+  min-height: 15vmin;
+  border-top: 1px solid #e1e4e8;
 }
 .repo__info {
- flex-direction: column;
- justify-content: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .repo__name {
-color: #0366D6;
-font-size: 2.5vmin;
-font-weight: normal;
+  color: #0366d6;
+  font-size: 2.5vmin;
+  font-weight: normal;
 }
 .repo__description {
   font-size: 1.5vmin;
@@ -160,11 +156,8 @@ font-weight: normal;
 }
 
 .repo__stars {
-
 }
 .repo__language {
   color: #999999;
   font-size: 1.5vmin;
 }
-
-
