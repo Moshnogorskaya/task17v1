@@ -64,45 +64,95 @@ select {
 
 .search__criteria-group {
   width: 80%;
-  min-height: 7vmin;
+  min-height: 7vh;
   justify-content: space-between;
   align-items: flex-end;
   font-size: 1.5vmin;
 }
 
 .criteria__type {
-  height: 3vmin;
+  height: 3.5vh;
   width: 20%;
   background: white;
   border-bottom: 1px solid #0366d6;
   align-items: center;
+  border-bottom-left-radius:10px !important;
+border-top-left-radius:10px !important;
+border-top-right-radius:0 !important;
+border-bottom-right-radius:0 !important;
 }
 
 .criteria__language {
-  height: 3vmin;
+  height: 3.5vh;
   width: 20%;
   border-bottom: 1px solid #0366d6;
   align-items: center;
   background: white;
 }
 .criteria__text {
-  height: 3vmin;
+  height: 3.5vh;
   width: 35%;
-  border-bottom: 2px solid #0366d6;
+  border-bottom: 1px solid #0366d6;
   align-items: center;
 }
 .search__button {
-  height: 3vmin;
+  height: 3.5vh;
   width: 13%;
   background: #0366d6;
   color: white;
   justify-content: center;
   align-items: center;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
 }
+
+.criteria__type:focus,
+.criteria__language:focus,
+.criteria__text:focus {
+  border-bottom: 2px solid #0366d6;
+  outline: 0;
+  box-shadow: none;
+}
+
+
+.search__button:active {
+  box-shadow: none;
+  outline: 0;
+}
+.search__button:focus {
+  outline: 0;
+}
+
 
 /* results */
 
 .search__results-group {
   width: 80%;
   flex-direction: column;
+}
+
+.no-result-group {
+  flex-direction: column;
+  height: 78.69vh;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.no-result-group__heading {
+  color: #0366d6;
+  font-size: 4vmin;
+}
+.no-result-group__text {
+  margin-top: 0.5vh;
+  font-size: 3vmin;
+  font-weight: normal;
+}
+.no-result-group__image {
+  position: absolute;
+  top: center;
+  left: center;
+  height: 25vh;
+  width: 25vh;
+  background: url("../../assets/github_icon.png") no-repeat;
+  background-size: contain;
+  opacity: 0.0428;
 }

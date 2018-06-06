@@ -8,29 +8,32 @@
     </select>
 
     <select #language (blur)='updateLanguage(language.value)' class='criteria__language'>
-        <option disabled>Language</option>
-        <option value='Javascript'>Javascript</option>
-        <option value='CSS'>CSS</option>
-        <option value='HTML'>HTML</option>
-        <option value='PHP'>PHP</option>
-        <option value='Ruby'>Ruby</option>
-        <option value='C++'>C++</option>
-        <option value='Python'>Python</option>
-        <option value='C#'>C#</option>
-        <option value='Java'>Java</option>
-        <option value='Go'>Go</option>
-        <option value='Haskell'>Haskell</option>
+      <option disabled>Language</option>
+      <option value='Javascript'>Javascript</option>
+      <option value='CSS'>CSS</option>
+      <option value='HTML'>HTML</option>
+      <option value='PHP'>PHP</option>
+      <option value='Ruby'>Ruby</option>
+      <option value='C++'>C++</option>
+      <option value='Python'>Python</option>
+      <option value='C#'>C#</option>
+      <option value='Java'>Java</option>
+      <option value='Go'>Go</option>
+      <option value='Haskell'>Haskell</option>
     </select>
 
     <input #searchTerm (blur)='updateSearchTerm(searchTerm.value)' type='text' class='criteria__text' placeholder='Type here for search'>
-    
+
     <button (click)='getRepos()' class='search__button'>SEARCH</button>
- 
+
   </form>
-  <app-results *ngIf='checkRepos(); else noResult'  [repos]='repos' class='search__results-group'></app-results>
+  <app-results *ngIf='checkRepos(); else noResult' [repos]='repos' class='search__results-group'></app-results>
   <ng-template #noResult class='no-result-group'>
-    <h1 class='no-result-group__heading'>NO RESULTS FOUND</h1>
-    <p class='no-result-group__text'>select other parameters and try again</p>
+    <div class='no-result-group'>
+      <h1 class='no-result-group__heading'>NO RESULTS FOUND</h1>
+      <p class='no-result-group__text'>select other parameters and try again</p>
+      <div class='no-result-group__image'></div>
+    </div>
   </ng-template>
 
 </div>

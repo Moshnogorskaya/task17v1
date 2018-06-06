@@ -17,7 +17,7 @@ export class SearchComponent implements OnInit {
   url: string;
 
   constructor(private repoService: RepoService) {}
-
+ 
   updateType(value: string): void {
     this.type = value.toLowerCase();
   }
@@ -47,5 +47,8 @@ export class SearchComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.type = '';
+    this.language = '';
+    this.searchTerm = '';
   }
 }

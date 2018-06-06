@@ -63,12 +63,14 @@ select {
     flex-direction: column;
     font-family: Roboto, sans-serif;
     font-weight: 100;
+    min-width: 550px;
+    min-height: 600px;
 }
 
 .header {
     background: #3C4146;
     color: #FFFFFF;
-    height: 7vmin;
+    height: 7vh;
     justify-content: space-between;
 }
 
@@ -123,7 +125,7 @@ justify-content: center;
 }
 
 .footer {
-    height: 5vmin;
+    height: 5vh;
     background: #3C4146;
     color: #FFFFFF;
     align-items: center;
