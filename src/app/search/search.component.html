@@ -27,25 +27,7 @@
     <button (click)='getRepos()' class='search__button'>SEARCH</button>
  
   </form>
-  <app-results [repos]='repos' class='search__results-group'></app-results>
-  <!-- <div class='search__results-group results'>
-    <div class='results__view-toggle view'>
-      <a class='view__dashboard dashboard'>a</a>
-      <a class='view__list'>a</a>
-    </div>
-
-    <ul class='results__list'>
-      <li *ngFor="let repo of repos" class='repo'>
-        <div class='repo__info'>
-          <h1 class='repo__name'>{{repo.name}}</h1>
-          <p class='repo__description'>{{repo.description}}</p>
-        </div>
-        <div class='repo__stats'>
-          <div class='repo__stars'>{{repo.stargazers_count}}</div>
-          <div class='repo__language'>{{repo.language}}</div>
-        </div>
-      </li>      
-    </ul>
-  </div> -->
+  <app-results *ngIf='[repos]; else noResult'  [repos]='repos' class='search__results-group'></app-results>
+  <ng-template #noResult>NO RESULT!!!</ng-template>
 
 </div>
