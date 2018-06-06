@@ -9,8 +9,21 @@ import { RepoService } from '../repo.service';
   styleUrls: ['./results.component.css']
 })
 export class ResultsComponent implements OnInit {
+
+  onClickList(): any {
+    console.log('list!');
+    return true;
+  }
+  onClickTile(): any {
+    console.log('tile!')
+    return true;
+  }
+
   constructor() { }
   ngOnInit() {
+    this.onClickList();
   }
+
+
 
 }

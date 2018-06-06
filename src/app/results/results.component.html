@@ -1,7 +1,7 @@
 
   <div class='results__view-toggle view'>
-    <a class='view__dashboard dashboard'>a</a>
-    <a class='view__list'>a</a>
+    <a (click)='onClickTile()' class='view__dashboard'[class.active]='isActive' >Tile</a>
+    <a (click)='onClickList()' class='view__list' [class.active]='isActive'>List</a>
   </div>
 
   <ul class='results__list'>

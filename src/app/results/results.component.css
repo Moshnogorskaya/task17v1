@@ -57,62 +57,64 @@ select {
   border: none;
 }
 
+.results__view-toggle {
+  min-height: 15vmin;
+  justify-content: flex-end;
+  font-size: 4vmin;
+}
 
+.view__dashboard {
+  width: 10%;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
 
+.view__list {
+  width: 10%;
+  justify-content: center;
+  align-items: center;
+  font-size: 4vmin;
+  cursor: pointer;
+}
 
+.view__dashboard.active,
+.view__list.active {
+  color: red;
+}
 
-  
-  .results__view-toggle {
-    min-height: 15vmin;
-    justify-content: flex-end;
-    font-size: 4vmin;
-  }
-  
-  .view__dashboard {
-    width: 10%;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .view__list {
-    width: 10%;
-    justify-content: center;
-    align-items: center;
-    font-size: 4vmin;
-  }
-  
-  .results__list {
-    flex-direction: column;
-  }
-  
-  .repo {
-    justify-content: space-between;
-    min-height: 15vmin;
-    border-top: 1px solid #e1e4e8;
-  }
-  .repo__info {
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  .repo__name {
-    color: #0366d6;
-    font-size: 2.5vmin;
-    font-weight: normal;
-  }
-  .repo__description {
-    font-size: 1.5vmin;
-  }
-  
-  .repo__stats {
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .repo__stars {
-  }
-  .repo__language {
-    color: #999999;
-    font-size: 1.5vmin;
-  }
+.results__list {
+  flex-direction: column;
+}
+
+.repo {
+  justify-content: space-between;
+  min-height: 15vmin;
+  border-top: 1px solid #e1e4e8;
+}
+.repo__info {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.repo__name {
+  color: #0366d6;
+  font-size: 2.5vmin;
+  font-weight: normal;
+}
+.repo__description {
+  font-size: 1.5vmin;
+}
+
+.repo__stats {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.repo__stars {
+}
+.repo__language {
+  color: #999999;
+  font-size: 1.5vmin;
+}
