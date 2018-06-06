@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Repo } from '../repo';
-import { REPOS } from '../mock-repos';
 import { RepoService } from '../repo.service';
 
 @Component({
@@ -13,7 +12,8 @@ export class SearchComponent implements OnInit {
 
   constructor(private repoService: RepoService) { }
     getRepos(): void {
-      this.repos = this.repoService.getRepos();
+      this.repoService.getRepos()
+        .subscribe(repos => this.repos = repos);
     }
 
 
