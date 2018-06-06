@@ -12,26 +12,26 @@ export class SearchComponent implements OnInit {
   type: string;
   language: string;
   searchTerm: string;
+  url: string;
 
   constructor(private repoService: RepoService) { }
 
   updateType(value: string): void{
-    this.type = value;
-    console.log(this.type);
+    this.type = value.toLowerCase();
   }
 
   updateLanguage(value: string): void{
-    this.language = value;
-    console.log(this.language);
+    this.language = value.toLowerCase();
   }
 
   updateSearchTerm(value: string): void{
-    this.searchTerm = value;
-    console.log(this.searchTerm);
+    this.searchTerm = value.toLowerCase();
   }
 
-  getURL(): string {
-    return 'hi';
+  getURL(): boolean {
+    this.url = `https://api.github.com/search/${this.type}?q=${this.searchTerm}+language:${this.language}&sort=stars&order=desc`;
+    console.log(this.url);
+    return false;
   }
 
     getRepos(): void {
