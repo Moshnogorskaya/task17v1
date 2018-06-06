@@ -27,7 +27,7 @@
     <button (click)='getRepos()' class='search__button'>SEARCH</button>
  
   </form>
-  <app-results *ngIf='[repos]; else noResult'  [repos]='repos' class='search__results-group'></app-results>
+  <app-results *ngIf='reposCheck(); else noResult'  [repos]='repos' class='search__results-group'></app-results>
   <ng-template #noResult>NO RESULT!!!</ng-template>
 
 </div>

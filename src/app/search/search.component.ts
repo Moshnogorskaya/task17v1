@@ -18,6 +18,10 @@ export class SearchComponent implements OnInit {
 
   constructor(private repoService: RepoService) {}
 
+  reposCheck(): number {
+    return this.repos.length;
+  }
+
   updateType(value: string): void {
     this.type = value.toLowerCase();
   }
