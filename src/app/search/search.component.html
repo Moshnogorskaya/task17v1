@@ -2,12 +2,12 @@
 
   <form class='search__criteria-group criteria'>
 
-    <select #type (blur)='update(type.value)' class='criteria__type'>
+    <select #type (blur)='updateType(type.value)' class='criteria__type'>
       <option disabled>Type</option>
       <option value='Repositories'>Repositories</option>
     </select>
 
-    <select class='criteria__language'>
+    <select #language (blur)='updateLanguage(language.value)' class='criteria__language'>
         <option disabled>Language</option>
         <option value='Javascript'>Javascript</option>
         <option value='CSS'>CSS</option>
@@ -22,7 +22,7 @@
         <option value='Haskell'>Haskell</option>
     </select>
 
-    <input type='text' class='criteria__text' placeholder='Type here for search'>
+    <input #searchTerm (blur)='updateSearchTerm(searchTerm.value)' type='text' class='criteria__text' placeholder='Type here for search'>
     
     <button (click)='onRefreshSearch()' class='search__button'>SEARCH</button>
  
