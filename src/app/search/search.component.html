@@ -27,8 +27,8 @@
     <button (click)='getRepos()' class='search__button'>SEARCH</button>
  
   </form>
-
-  <div class='search__results-group results'>
+  <app-results [repos]='repos' class='search__results-group'></app-results>
+  <!-- <div class='search__results-group results'>
     <div class='results__view-toggle view'>
       <a class='view__dashboard dashboard'>a</a>
       <a class='view__list'>a</a>
@@ -46,6 +46,6 @@
         </div>
       </li>      
     </ul>
-  </div>
+  </div> -->
 
 </div>
