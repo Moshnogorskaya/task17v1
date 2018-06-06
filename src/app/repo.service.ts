@@ -10,15 +10,13 @@ import { Repo } from './repo';
 })
 export class RepoService {
 
-  private reposUrl = 'https://api.github.com/search/repositories?q=tetris+language:assembly&sort=stars&order=desc';  // URL to web api
-
   constructor(private http: HttpClient) { }
 
   getURLString(): any {}
 
-  getRepos(): Observable<Repo[]> {
+  getRepos(url): Observable<Repo[]> {
     return this.http
-      .get<any>(this.reposUrl)
+      .get<any>(url)
       .pipe(
         map(response => response.items),
         tap(repos => console.log('fetched repos')),

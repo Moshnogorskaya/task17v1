@@ -28,25 +28,16 @@ export class SearchComponent implements OnInit {
     this.searchTerm = value.toLowerCase();
   }
 
-  getURL(): boolean {
-    this.url = `https://api.github.com/search/${this.type}?q=${this.searchTerm}+language:${this.language}&sort=stars&order=desc`;
-    console.log(this.url);
-    return false;
-  }
-
-    getRepos(): void {
-      this.repoService.getRepos()
+    getRepos(): boolean {
+      this.url = `https://api.github.com/search/${this.type}?q=${this.searchTerm}+language:${this.language}&sort=stars&order=desc`;
+      this.repoService.getRepos(this.url)
         .subscribe(repos => this.repos = repos);
+        console.log('get repos done');
+        return false;
     }
 
   ngOnInit() {
     this.getRepos();
-  }
-
-  onRefreshSearch(): boolean {
-    console.log('search button click');
-    this.getRepos();
-    return false;
   }
 
 }

@@ -7,12 +7,14 @@ import { AppRoutingModule } from './/app-routing.module';
 import { SearchComponent } from './search/search.component';
 
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api'; // del
-import { InMemoryDataService }  from './in-memory-data.service'; //del
+import { InMemoryDataService }  from './in-memory-data.service';
+import { ResultsComponent } from './results/results.component'; //del
 
 @NgModule({
   declarations: [
     AppComponent,
-    SearchComponent
+    SearchComponent,
+    ResultsComponent
   ],
   imports: [
     BrowserModule,
