@@ -5,3 +5,4 @@
   </div>
 
   <app-list *ngIf='isList' [repos]='repos'></app-list>
+  <app-dashboard *ngIf='!isList' [repos]='repos'></app-dashboard>

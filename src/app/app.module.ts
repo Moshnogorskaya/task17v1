@@ -9,14 +9,16 @@ import { SearchComponent } from './search/search.component';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api'; // del
 import { InMemoryDataService }  from './in-memory-data.service';
 import { ResultsComponent } from './results/results.component';
-import { ListComponent } from './list/list.component'; //del
+import { ListComponent } from './list/list.component';
+import { DashboardComponent } from './dashboard/dashboard.component'; //del
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponent,
     ResultsComponent,
-    ListComponent
+    ListComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
