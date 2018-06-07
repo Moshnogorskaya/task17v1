@@ -25,6 +25,15 @@ export class RepoService {
     );
   }
 
+  addRepo(repo: Repo, repos: Repo[]): Repo[] {
+    let newRepos = [...repos];
+    console.log('newRepos!', newRepos);
+    newRepos = newRepos.filter(item => item.id !== repo.id);
+    console.log('newRepos after filter!', newRepos);
+    newRepos.push(repo);
+    return newRepos;
+  }
+
   /**
    * Handle Http operation that failed.
    * Let the app continue.

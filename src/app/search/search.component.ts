@@ -2,7 +2,6 @@ import { Component, OnInit } from "@angular/core";
 
 import { Repo } from "../repo";
 import { RepoService } from "../repo.service";
-import { ResultsComponent } from "../results/results.component";
 
 @Component({
   selector: "app-search",
@@ -42,7 +41,6 @@ export class SearchComponent implements OnInit {
     this.repoService
       .getRepos(this.url)
       .subscribe(repos => (this.repos = repos));
-    console.log("get repos done");
     return false;
   }
 
