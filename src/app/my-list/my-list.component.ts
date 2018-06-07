@@ -13,7 +13,11 @@ repos: Repo[];
 
   ngOnInit() {
 this.repos = this.repoService.getSavedRepos();
-console.log(this.repos);
   }
+
+  checkRepos(): boolean {
+    if (this.repos && this.repos.length) return true;
+    return false;
+   }
 
 }

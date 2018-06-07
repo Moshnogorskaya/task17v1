@@ -1,3 +1,10 @@
-<p>
-  my-list works!
-</p>
+<h1>My List</h1>
+<app-results *ngIf='checkRepos(); else noItemsToDisplay' [repos]='repos'></app-results>
+  <ng-template #noItemsToDisplay>
+    <div class='no-result-group'>
+      <h1 class='no-result-group__heading'>NOTHING HERE</h1>
+      <p class='no-result-group__text'>add some items to list</p>
+      <div class='no-result-group__image'></div>
+    </div>
+  </ng-template>
+
