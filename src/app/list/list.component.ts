@@ -12,14 +12,17 @@ export class ListComponent implements OnInit {
   
   constructor(private repoService: RepoService) { }
 
+savedRepos: Repo[] = [];
+
   onClick(repo: Repo) {
     if(!repo.archived) {
-      this.repoService.addRepo(repo)   
+      this.savedRepos = this.repoService.addRepo(repo, this.savedRepos)   
       repo.archived = true;
     }else{
-      this.repoService.deleteRepo(repo)
+      this.savedRepos = this.repoService.deleteRepo(repo, this.savedRepos)
       repo.archived = false;
     }
+    console.log(this.savedRepos);
   }
 
   ngOnInit() {

@@ -2,7 +2,7 @@
   <li *ngFor="let repo of repos" class='repo'>
 
     <div class='wrapper'>
-      <div (click)='onClick(repo, repos)' class='repo__add'>add</div>
+      <div (click)='onClick(repo)' class='repo__add'>add</div>
       <div class='repo__info'>
         <h1 class='repo__name'>{{repo.name}}</h1>
         <p class='repo__description'>{{repo.description}}</p>
