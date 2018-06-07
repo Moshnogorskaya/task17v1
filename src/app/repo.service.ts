@@ -10,6 +10,8 @@ import { Repo } from "./repo";
 })
 export class RepoService {
   constructor(private http: HttpClient) {}
+  
+  savedRepos = [];
 
   getURLString(): any {}
 
@@ -25,16 +27,17 @@ export class RepoService {
     );
   }
 
-  addRepo(repo: Repo, repos: Repo[]): Repo[] {
-    let newRepos = this.deleteRepo(repo, repos);
-    newRepos.push(repo);
-    return newRepos;
+  addRepo(repo: Repo): Repo[] {
+    this.deleteRepo(repo).push(repo);
+    console.log('repos after adding!', this.savedRepos);
+    return this.savedRepos;
   }
   
-  deleteRepo(repo: Repo, repos: Repo[]): Repo[] {
-    let newRepos = [...repos];
-    newRepos = newRepos.filter(item => item.id !== repo.id);
-    return newRepos;
+  deleteRepo(repo: Repo): Repo[] {
+    let oldRepos = [...this.savedRepos];
+    this.savedRepos = oldRepos.filter(item => item.id !== repo.id);
+    console.log('repos after deleting!', this.savedRepos);
+    return this.savedRepos;
   }
 
 
