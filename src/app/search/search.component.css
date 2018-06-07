@@ -54,7 +54,7 @@ select {
   margin: 0;
   display: flex;
   box-sizing: border-box;
-  border: none;
+  border: 1px solid lightblue;
 }
 
 .search-page {
@@ -89,11 +89,28 @@ border-bottom-right-radius:0 !important;
   align-items: center;
   background: white;
 }
+
+.input {
+  flex-direction: column;
+  height: 6vh;
+  width: 35%;
+  justify-content: space-between;
+}
+
+.input__placeholder {
+  font-size: 1.5vmin;
+  position: relative;
+  top: 3vh;
+}
+
+.input__placeholder.active {
+  color: #0366D6;
+  top: 0;
+}
+
 .criteria__text {
   height: 3.5vh;
-  width: 35%;
   border-bottom: 1px solid #0366d6;
-  align-items: center;
 }
 .search__button {
   height: 3.5vh;

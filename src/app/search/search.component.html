@@ -22,7 +22,10 @@
       <option value='Haskell'>Haskell</option>
     </select>
 
-    <input #searchTerm (blur)='updateSearchTerm(searchTerm.value)' type='text' class='criteria__text' placeholder='Type here for search'>
+    <div class='input'>
+      <p class="input__placeholder active">Type here for search</p>
+    <input #searchTerm (blur)='updateSearchTerm(searchTerm.value)' type='text' class='criteria__text input__field'>
+    </div>
 
     <button (click)='getRepos()' class='search__button'>SEARCH</button>
 
