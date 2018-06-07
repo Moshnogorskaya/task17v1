@@ -1,9 +1,14 @@
 <ul class='results__list'>
   <li *ngFor="let repo of repos" class='repo'>
-    <div class='repo__info'>
-      <h1 class='repo__name'>{{repo.name}}</h1>
-      <p class='repo__description'>{{repo.description}}</p>
+
+    <div class='wrapper'>
+      <div (click)='onClick(repo)' class='repo__add'>add</div>
+      <div class='repo__info'>
+        <h1 class='repo__name'>{{repo.name}}</h1>
+        <p class='repo__description'>{{repo.description}}</p>
+      </div>
     </div>
+
     <div class='repo__stats'>
       <div class='repo__stars'>{{repo.stargazers_count}}</div>
       <div class='repo__language'>{{repo.language}}</div>

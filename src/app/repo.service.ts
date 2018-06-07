@@ -16,6 +16,10 @@ export class RepoService {
   getRepos(url): Observable<Repo[]> {
     return this.http.get<any>(url).pipe(
       map(response => response.items),
+      map(repos => {
+        repos.archived = false;
+        return repos;
+      }),
       tap(repos => console.log("fetched repos")),
       catchError(this.handleError("getRepos", []))
     );

@@ -10,7 +10,8 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api'; // d
 import { InMemoryDataService }  from './in-memory-data.service';
 import { ResultsComponent } from './results/results.component';
 import { ListComponent } from './list/list.component';
-import { DashboardComponent } from './dashboard/dashboard.component'; //del
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { MyListComponent } from './my-list/my-list.component'; //del
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { DashboardComponent } from './dashboard/dashboard.component'; //del
     SearchComponent,
     ResultsComponent,
     ListComponent,
-    DashboardComponent
+    DashboardComponent,
+    MyListComponent
   ],
   imports: [
     BrowserModule,

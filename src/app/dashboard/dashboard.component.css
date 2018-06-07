@@ -59,8 +59,50 @@ select {
 
 .results__list {
 flex-wrap: wrap;
+justify-content: center;
 }
 
 .repo {
-    width: 50%;
+    width: 40%;
+    height: 35vh;
+    flex-direction: column;
+    padding: 3vh 3vw 3vh 3vw;
+    border: 1px solid #E0E0E0;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
+    margin: 1.5%;
+}
+
+.repo__stats {
+  justify-content: space-between;
+}
+.repo__language {
+  color: #999999;
+  font-size: 1.5vmin;
+  align-items: center;
+}
+.repo__stars{
+  font-size: 2vmin;
+}
+.repo__name {
+  margin-top: 5vh;
+  color: #0366D6;
+  font-size: 3vmin;
+  font-weight: normal;
+}
+.repo__description {
+  font-size: 1.5vmin;
+  overflow: auto;
+  height: 10vh;
+}
+.repo__add {
+  color: white;
+  background: #0366D6;
+  border: none;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
+  width: 50%;
+  height: 4.5vmin;
+  align-self: center;
+  margin-top: 1vh;
+  font-weight: 100;
+  font-size: 1.5vmin;
 }

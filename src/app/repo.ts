@@ -5,4 +5,5 @@ export class Repo {
     language: string;
     html_url: string;
     stargazers_count: number;
+    archived: boolean;
   }
