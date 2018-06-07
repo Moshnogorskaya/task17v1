@@ -10,7 +10,7 @@ import { RepoService } from "../repo.service";
 })
 export class ListComponent implements OnInit {
   
-  constructor(private repoService: RepoService) { }
+  constructor(public repoService: RepoService) { }
 
   onClick(repo: Repo) {
     if(!repo.archived) {

@@ -15,7 +15,7 @@ export class SearchComponent implements OnInit {
   searchTerm: string;
   url: string;
 
-  constructor(private repoService: RepoService) {}
+  constructor(public repoService: RepoService) {}
  
   updateType(value: string): void {
     this.type = value.toLowerCase();

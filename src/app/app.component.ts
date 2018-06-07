@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RepoService } from './repo.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  constructor (public repoService: RepoService) {}
   title = 'app';
 }

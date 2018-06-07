@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { RepoService } from '../repo.service';
+import { Repo } from "../repo";
 
 @Component({
   selector: 'app-my-list',
@@ -6,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./my-list.component.css']
 })
 export class MyListComponent implements OnInit {
-
-  constructor() { }
+repos: Repo[];
+  constructor(public repoService: RepoService) { }
 
   ngOnInit() {
+this.repos = this.repoService.getSavedRepos();
+console.log(this.repos);
   }
 
 }

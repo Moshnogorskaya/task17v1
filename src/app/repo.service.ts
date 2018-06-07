@@ -39,7 +39,11 @@ export class RepoService {
     console.log('repos after deleting!', this.savedRepos);
     return this.savedRepos;
   }
-
+ 
+  getSavedRepos() {
+    let repos = [...this.savedRepos];
+    return repos;
+  }
 
   /**
    * Handle Http operation that failed.
