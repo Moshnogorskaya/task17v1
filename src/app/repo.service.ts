@@ -26,13 +26,17 @@ export class RepoService {
   }
 
   addRepo(repo: Repo, repos: Repo[]): Repo[] {
-    let newRepos = [...repos];
-    console.log('newRepos!', newRepos);
-    newRepos = newRepos.filter(item => item.id !== repo.id);
-    console.log('newRepos after filter!', newRepos);
+    let newRepos = this.deleteRepo(repo, repos);
     newRepos.push(repo);
     return newRepos;
   }
+  
+  deleteRepo(repo: Repo, repos: Repo[]): Repo[] {
+    let newRepos = [...repos];
+    newRepos = newRepos.filter(item => item.id !== repo.id);
+    return newRepos;
+  }
+
 
   /**
    * Handle Http operation that failed.

@@ -45,8 +45,5 @@ export class SearchComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.type = '';
-    this.language = '';
-    this.searchTerm = '';
   }
 }
