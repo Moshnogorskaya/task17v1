@@ -2,12 +2,12 @@
 
   <form class='search__criteria-group criteria'>
 
-    <select #type (blur)='updateType(type.value)' class='criteria__type'>
+    <select #type (blur)='updateType(type.value)' (keyup.enter)='updateType(type.value)' class='criteria__type'>
       <option disabled>Type</option>
       <option value='Repositories'>Repositories</option>
     </select>
 
-    <select #language (blur)='updateLanguage(language.value)' class='criteria__language'>
+    <select #language (blur)='updateLanguage(language.value)' (keyup.enter)='updateLanguage(language.value)' class='criteria__language'>
       <option disabled>Language</option>
       <option value='Javascript'>Javascript</option>
       <option value='CSS'>CSS</option>
@@ -23,8 +23,8 @@
     </select>
 
     <div class='input'>
-      <p class="input__placeholder active">Type here for search</p>
-    <input #searchTerm (blur)='updateSearchTerm(searchTerm.value)' type='text' class='criteria__text input__field'>
+      <p class="input__placeholder">Type here for search</p>
+    <input #searchTerm (focus)='isActive()' (blur)='updateSearchTerm(searchTerm.value); isNotActive()' (keyup.enter)='updateSearchTerm(searchTerm.value)' type='text' class='criteria__text input__field'>
     </div>
 
     <button (click)='getRepos()' class='search__button'>SEARCH</button>

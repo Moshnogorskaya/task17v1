@@ -14,9 +14,20 @@ export class SearchComponent implements OnInit {
   language: string;
   searchTerm: string;
   url: string;
+  textInputActive = false;
 
   constructor(public repoService: RepoService) {}
  
+  isActive () {
+    this.textInputActive = true;
+    console.log('active!!!')
+  }
+
+  isNotActive () {
+    this.textInputActive = false;
+    console.log('not active!!!')
+  }
+
   updateType(value: string): void {
     this.type = value.toLowerCase();
   }

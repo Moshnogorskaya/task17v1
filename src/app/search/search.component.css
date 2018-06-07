@@ -101,6 +101,7 @@ border-bottom-right-radius:0 !important;
   font-size: 1.5vmin;
   position: relative;
   top: 3vh;
+  z-index: 1;
 }
 
 .input__placeholder.active {
@@ -111,6 +112,8 @@ border-bottom-right-radius:0 !important;
 .criteria__text {
   height: 3.5vh;
   border-bottom: 1px solid #0366d6;
+  background: transparent;
+  z-index: 2;
 }
 .search__button {
   height: 3.5vh;
