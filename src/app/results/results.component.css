@@ -54,7 +54,6 @@ select {
   margin: 0;
   display: flex;
   box-sizing: border-box;
-  border: none;
 }
 
 i {
@@ -64,25 +63,26 @@ i {
 .results__view-toggle {
   height: 10vh;
   justify-content: flex-end;
-  font-size: 4vmin;
+  font-size: 4vw;
   font-family:'FontAwesome' !important;
   color: #E0E0E0;
 }
 
 .view__dashboard {
-  width: 7%;
+  width: 4vw;
   justify-content: flex-end;
   align-items: center;
   cursor: pointer;
   padding-top: 0.5vh;
+  margin-right: 10px;
 }
 
 .view__list {
-  width: 7%;
+  width: 4vw;
   justify-content: flex-end;
   align-items: center;
   cursor: pointer;
-  font-size: 4.2vmin;
+  font-size: 4.2vw;
 }
 
 .view__dashboard.active,

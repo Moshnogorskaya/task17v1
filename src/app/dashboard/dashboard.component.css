@@ -1,6 +1,5 @@
 body,
 div,
-span,
 iframe,
 a,
 h1,
@@ -57,6 +56,10 @@ select {
   border: none;
 }
 
+i {
+  font-style: normal !important;
+}
+
 .results__list {
 flex-wrap: wrap;
 justify-content: center;
@@ -66,13 +69,14 @@ justify-content: center;
     width: 40%;
     height: 35vh;
     flex-direction: column;
-    padding: 3vh 3vw 3vh 3vw;
+    padding: 0 3% 0 3%;
     border: 1px solid #E0E0E0;
     box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
     margin: 1.5%;
 }
 
 .repo__stats {
+  height: 20%;
   justify-content: space-between;
 }
 .repo__language {
@@ -82,27 +86,56 @@ justify-content: center;
 }
 .repo__stars{
   font-size: 2vmin;
+  align-items: center;
+}
+
+.stars__icon {
+  font-family:'FontAwesome' !important;
+  color: #F1E05A;
+  margin-right: 5px;
+  font-size: 2.5vmin;
 }
 .repo__name {
-  margin-top: 5vh;
   color: #0366D6;
   font-size: 3vmin;
   font-weight: normal;
+  height: 20%;
+  align-items: flex-end;
 }
 .repo__description {
-  font-size: 1.5vmin;
+  font-size: 1.7vmin;
   overflow: auto;
-  height: 10vh;
+  height: 35%;
+  font-weight: normal;
+  padding-top: 0.5vh;
 }
-.repo__add {
+
+.button-wrapper {
+  height: 25%;
+ align-items: flex-start;
+ justify-content: center;
+ padding-top: 1vh;
+}
+.repo__action {
   color: white;
   background: #0366D6;
   border: none;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
-  width: 50%;
-  height: 4.5vmin;
-  align-self: center;
-  margin-top: 1vh;
+  width: 35%;
+  height: 60%;
   font-weight: 100;
   font-size: 1.5vmin;
+}
+
+.repo__action_red {
+  width: 50%;
+  background: #EB5757;
+}
+
+.repo__action:focus {
+  outline: none;
+}
+
+.repo__action:active {
+  box-shadow: none;
 }

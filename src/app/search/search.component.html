@@ -39,7 +39,7 @@
     <input #searchTerm
       (focus)='isActive()' (blur)='updateSearchTerm(searchTerm.value); isNotActive(searchTerm.value)'
       (keyup.enter)='updateSearchTerm(searchTerm.value)'
-      type='text' class='criteria__text input__field'>
+      type='text' maxlength="50" class='criteria__text input__field'>
     </div>
 
     <button (click)='getRepos()' class='search__button'>SEARCH</button>

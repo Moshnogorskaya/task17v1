@@ -7,6 +7,6 @@ import { RepoService } from './repo.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor (public repoService: RepoService) {}
+  constructor (private repoService: RepoService) {}
   title = 'app';
 }

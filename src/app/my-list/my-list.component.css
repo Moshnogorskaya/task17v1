@@ -1,0 +1,97 @@
+body,
+div,
+span,
+iframe,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+big,
+cite,
+code,
+em,
+img,
+ins,
+q,
+s,
+small,
+strong,
+u,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+canvas,
+footer,
+header,
+menu,
+nav,
+input,
+select {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  box-sizing: border-box;
+  border: 1px solid lightblue;
+  border-radius: 0px;
+  appearance: none;
+}
+
+.my-list {
+    
+}
+
+
+.search__results-group {
+    width: 80%;
+    flex-direction: column;
+  }
+  
+  .no-result-group {
+    flex-direction: column;
+    height: 78.69vh;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .no-result-group__heading {
+    color: #0366d6;
+    font-size: 4vmin;
+  }
+  .no-result-group__text {
+    margin-top: 0.5vh;
+    font-size: 3vmin;
+    font-weight: normal;
+  }
+  .no-result-group__image {
+    position: absolute;
+    top: center;
+    left: center;
+    height: 25vh;
+    width: 25vh;
+    background: url("../../assets/github_icon.png") no-repeat;
+    background-size: contain;
+    opacity: 0.0428;
+  }

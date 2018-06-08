@@ -141,7 +141,6 @@ select {
 
 .search__button:active {
   box-shadow: none;
-  outline: 0;
 }
 .search__button:focus {
   outline: 0;

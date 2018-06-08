@@ -15,7 +15,7 @@ export class SearchComponent implements OnInit {
   searchTerm: string = '';
   textInputActive = false;
 
-  constructor(public repoService: RepoService) {}
+  constructor(private repoService: RepoService) {}
  
   isActive () {
     this.textInputActive = true;
