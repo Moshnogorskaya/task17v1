@@ -10,10 +10,9 @@ import { RepoService } from "../repo.service";
 })
 export class SearchComponent implements OnInit {
   repos: Repo[];
-  type: string;
-  language: string;
-  searchTerm: string;
-  url: string;
+  type: string = '';
+  language: string = '';
+  searchTerm: string = '';
   textInputActive = false;
 
   constructor(public repoService: RepoService) {}
@@ -23,7 +22,7 @@ export class SearchComponent implements OnInit {
   }
 
   isNotActive (value) {
-    if (!(value&&value.length)) this.textInputActive = false;
+    if ( !(value && value.length)) this.textInputActive = false;
   }
 
   updateType(value: string): void {
@@ -31,11 +30,12 @@ export class SearchComponent implements OnInit {
   }
 
   updateLanguage(value: string): void {
-    if (value !== '') this.language = value.toLowerCase();
+    if (value !== 'Language') this.language = value.toLowerCase();
   }
 
-  updateSearchTerm(value: string): void {
-    this.searchTerm = value.toLowerCase();
+  updateSearchTerm(value: string): string {
+    if (value && value.length) return this.searchTerm = `${value.toLowerCase()}+`;
+    return this.searchTerm = '';
   }
 
   checkRepos(): any{
@@ -44,16 +44,15 @@ export class SearchComponent implements OnInit {
   }
 
   getRepos(): boolean {
-    this.url = `https://api.github.com/search/${this.type}?q=${
+    let url = `https://api.github.com/search/${this.type}?q=${
       this.searchTerm
-    }+language:${this.language}&sort=stars&order=desc`;
+    }language:${this.language}&sort=stars&order=desc`;
     this.repoService
-      .getRepos(this.url)
+      .getRepos(url)
       .subscribe(repos => (this.repos = repos));
     return false;
   }
 
   ngOnInit() {
-    this.language = 'a'; // for API needs
   }
 }
