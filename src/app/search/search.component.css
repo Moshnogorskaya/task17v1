@@ -54,7 +54,9 @@ select {
   margin: 0;
   display: flex;
   box-sizing: border-box;
-  border: 1px solid lightblue;
+  border: none;
+  appearance: none;
+  border-radius: 0px;
 }
 
 .search-page {
@@ -74,17 +76,17 @@ select {
   height: 3.5vh;
   width: 20%;
   background: white;
+  appearance: none;
+  border-radius: 0px;
   border-bottom: 1px solid #0366d6;
   align-items: center;
-  border-bottom-left-radius:10px !important;
-border-top-left-radius:10px !important;
-border-top-right-radius:0 !important;
-border-bottom-right-radius:0 !important;
 }
 
 .criteria__language {
   height: 3.5vh;
   width: 20%;
+  appearance: none;
+  border-radius: 0px;
   border-bottom: 1px solid #0366d6;
   align-items: center;
   background: white;
@@ -100,13 +102,13 @@ border-bottom-right-radius:0 !important;
 .input__placeholder {
   font-size: 1.5vmin;
   position: relative;
-  top: 3vh;
+  top: 3.5vh;
   z-index: 1;
 }
 
 .input__placeholder.active {
   color: #0366D6;
-  top: 0;
+  top: 1vh;
 }
 
 .criteria__text {

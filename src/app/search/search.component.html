@@ -23,8 +23,11 @@
     </select>
 
     <div class='input'>
-      <p class="input__placeholder">Type here for search</p>
-    <input #searchTerm (focus)='isActive()' (blur)='updateSearchTerm(searchTerm.value); isNotActive()' (keyup.enter)='updateSearchTerm(searchTerm.value)' type='text' class='criteria__text input__field'>
+      <p class="input__placeholder" [class.active]='textInputActive'>Type here for search</p>
+    <input #searchTerm
+      (focus)='isActive()' (blur)='updateSearchTerm(searchTerm.value); isNotActive(searchTerm.value)'
+      (keyup.enter)='updateSearchTerm(searchTerm.value)'
+      type='text' class='criteria__text input__field'>
     </div>
 
     <button (click)='getRepos()' class='search__button'>SEARCH</button>

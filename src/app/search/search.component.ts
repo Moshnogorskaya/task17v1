@@ -20,12 +20,10 @@ export class SearchComponent implements OnInit {
  
   isActive () {
     this.textInputActive = true;
-    console.log('active!!!')
   }
 
-  isNotActive () {
-    this.textInputActive = false;
-    console.log('not active!!!')
+  isNotActive (value) {
+    if (!(value&&value.length)) this.textInputActive = false;
   }
 
   updateType(value: string): void {
@@ -33,7 +31,7 @@ export class SearchComponent implements OnInit {
   }
 
   updateLanguage(value: string): void {
-    this.language = value.toLowerCase();
+    if (value !== '') this.language = value.toLowerCase();
   }
 
   updateSearchTerm(value: string): void {
@@ -56,5 +54,8 @@ export class SearchComponent implements OnInit {
   }
 
   ngOnInit() {
+    // this.type = '';
+    this.language = 'a';
+    // this.searchTerm = '';
   }
 }
