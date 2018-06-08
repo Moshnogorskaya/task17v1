@@ -2,12 +2,22 @@
 
   <form class='search__criteria-group criteria'>
 
-    <select #type (blur)='updateType(type.value)' (keyup.enter)='updateType(type.value)' class='criteria__type'>
+    <div class='select__group'>
+    <select #type
+      (blur)='updateType(type.value)'
+      (keyup.enter)='updateType(type.value)'
+      class='criteria__type select-group__select'>
       <option disabled>Type</option>
       <option value='Repositories'>Repositories</option>
     </select>
-
-    <select #language (blur)='updateLanguage(language.value)' (keyup.enter)='updateLanguage(language.value)' class='criteria__language'>
+    <div class='select-group__arrow'>▼</div>
+  </div>
+  
+  <div class='select__group'>
+    <select #language
+      (blur)='updateLanguage(language.value)'
+      (keyup.enter)='updateLanguage(language.value)'
+      class='criteria__language select-group__select'>
       <option disabled>Language</option>
       <option value='Javascript'>Javascript</option>
       <option value='CSS'>CSS</option>
@@ -21,6 +31,8 @@
       <option value='Go'>Go</option>
       <option value='Haskell'>Haskell</option>
     </select>
+    <div class='select-group__arrow'>▼</div>
+  </div>
 
     <div class='input'>
       <p class="input__placeholder" [class.active]='textInputActive'>Type here for search</p>
