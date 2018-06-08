@@ -1,7 +1,7 @@
 
   <div class='results__view-toggle view'>
-    <a (click)='onClickTile()' class='view__dashboard'[class.active]='!isList' >Tile</a>
-    <a (click)='onClickList()' class='view__list' [class.active]='isList'>List</a>
+    <a (click)='onClickTile()' class='view__dashboard'[class.active]='!isList'><i class="fas fa-th-large"></i></a>
+    <a (click)='onClickList()' class='view__list' [class.active]='isList'><i class="fas fa-bars"></i></a>
   </div>
 
   <app-list *ngIf='isList' [repos]='repos'></app-list>

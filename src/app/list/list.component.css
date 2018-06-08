@@ -1,6 +1,5 @@
 body,
 div,
-span,
 iframe,
 a,
 h1,
@@ -57,41 +56,71 @@ select {
   border: none;
 }
 
-
+i {
+  font-style: normal !important;
+}
 
 .results__list {
-    flex-direction: column;
-  }
-  
-  .repo {
-    justify-content: space-between;
-    min-height: 15vmin;
-    border-top: 1px solid #e1e4e8;
-  }
-  .repo__info {
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  .repo__name {
-    color: #0366d6;
-    font-size: 2.5vmin;
-    font-weight: normal;
-  }
-  .repo__description {
-    font-size: 1.5vmin;
-  }
-  
-  .repo__stats {
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .repo__stars {
-  }
-  .repo__language {
-    color: #999999;
-    font-size: 1.5vmin;
-  }
-  
+  flex-direction: column;
+}
+
+.repo {
+  justify-content: space-between;
+  min-height: 20vh;
+  border-top: 1px solid #e1e4e8;
+  padding: 2vh 3% 2vh 0;
+}
+
+.wrapper-repo-add {
+  width: 5%;
+  padding-top: 2vh;
+}
+
+.repo__add {
+  outline: 1px solid #0366D6;
+  margin-top: 4px;
+  border: 0.5vh solid white;
+  background: #0366D6;
+  height: 2vh;
+  width: 2vh;
+}
+
+.repo__info {
+  flex-direction: column;
+  width: 83%;
+  padding-top: 2vh;
+}
+
+.repo__name {
+  color: #0366d6;
+  font-size: 2.5vmin;
+  font-weight: normal;
+}
+.repo__description {
+  margin-top: 2px;
+  font-size: 1.5vmin;
+  font-weight: normal;
+}
+
+.repo__stats {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 12%;
+}
+
+.repo__stars {
+  font-size: 2vmin;
+}
+
+.stars-group__icon {
+  color: #F1E05A;
+  font-family:'FontAwesome' !important;
+  font-size: 2.5vmin;
+  margin-right: 2px;
+}
+
+.repo__language {
+  color: #999999;
+  font-size: 1.5vmin;
+}

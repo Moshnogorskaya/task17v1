@@ -57,28 +57,35 @@ select {
   border: none;
 }
 
+i {
+  font-style: normal !important;
+}
+
 .results__view-toggle {
-  min-height: 15vmin;
+  height: 10vh;
   justify-content: flex-end;
   font-size: 4vmin;
+  font-family:'FontAwesome' !important;
+  color: #E0E0E0;
 }
 
 .view__dashboard {
-  width: 10%;
-  justify-content: center;
+  width: 5%;
+  justify-content: flex-end;
   align-items: center;
   cursor: pointer;
+  padding-top: 0.5vh;
 }
 
 .view__list {
-  width: 10%;
-  justify-content: center;
+  width: 5%;
+  justify-content: flex-end;
   align-items: center;
-  font-size: 4vmin;
   cursor: pointer;
+  font-size: 4.2vmin;
 }
 
 .view__dashboard.active,
 .view__list.active {
-  color: red;
+  color: #3C4146;
 }
