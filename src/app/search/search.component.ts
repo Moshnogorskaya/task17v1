@@ -10,9 +10,9 @@ import { RepoService } from "../repo.service";
 })
 export class SearchComponent implements OnInit {
   repos: Repo[];
-  type: string = 'repositories';
-  language: string = '';
-  searchTerm: string = '';
+  type: string;
+  language: string;
+  searchTerm: string;
   url: string;
   textInputActive = false;
 
@@ -26,26 +26,16 @@ export class SearchComponent implements OnInit {
     if (!(value&&value.length)) this.textInputActive = false;
   }
 
-  updateType(value: string): string {
-    if (value && (value !== 'Type')) {
-      console.log('type value!', value);
-      return this.type = value.toLowerCase();
-    }
-    return this.type = 'repositories';
+  updateType(value: string): void {
+    this.type = value.toLowerCase();
   }
 
-  updateLanguage(value: string): string {
-    if (value && (value !== 'Language')) {
-      return this.language = `+language:${value.toLowerCase()}`;
-    }
-    return this.language = '';
+  updateLanguage(value: string): void {
+    if (value !== '') this.language = value.toLowerCase();
   }
 
-  updateSearchTerm(value: string): string {
-    if (value) {
-      return this.searchTerm = value.toLowerCase();
-    }
-    return this.searchTerm = '';
+  updateSearchTerm(value: string): void {
+    this.searchTerm = value.toLowerCase();
   }
 
   checkRepos(): any{
@@ -56,7 +46,7 @@ export class SearchComponent implements OnInit {
   getRepos(): boolean {
     this.url = `https://api.github.com/search/${this.type}?q=${
       this.searchTerm
-    }${this.language}&sort=stars&order=desc`;
+    }+language:${this.language}&sort=stars&order=desc`;
     this.repoService
       .getRepos(this.url)
       .subscribe(repos => (this.repos = repos));
@@ -64,5 +54,6 @@ export class SearchComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.language = 'a'; // for API needs
   }
 }
