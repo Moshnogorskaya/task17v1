@@ -70,7 +70,7 @@ i {
 }
 
 .view__dashboard {
-  width: 5%;
+  width: 7%;
   justify-content: flex-end;
   align-items: center;
   cursor: pointer;
@@ -78,7 +78,7 @@ i {
 }
 
 .view__list {
-  width: 5%;
+  width: 7%;
   justify-content: flex-end;
   align-items: center;
   cursor: pointer;
