@@ -6,4 +6,5 @@ export class Repo {
     html_url: string;
     stargazers_count: number;
     archived: boolean;
+    topics: string[];
   }

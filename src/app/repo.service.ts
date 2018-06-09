@@ -26,7 +26,7 @@ export class RepoService {
     return this.http.get<any>(url, httpOptions).pipe(
       map(response => response.items),
       map(repos => {
-        repos.archived = false;
+        repos.archived = true;
         return repos;
       }),
       tap(repos => console.log("fetched repos")),

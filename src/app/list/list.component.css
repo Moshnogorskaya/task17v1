@@ -66,22 +66,21 @@ i {
 
 .repo {
   justify-content: space-between;
-  min-height: 20vh;
+  height: 20vh;
   border-top: 1px solid #e1e4e8;
   padding: 2vh 3% 2vh 0;
 }
 
 .wrapper-repo-action {
-  width: 5%;
+  width: 3%;
   padding-top: 2vh;
 }
 
 .repo__action {
   outline: 1px solid #0366D6;
-  margin-top: 4px;
   border: 0.5vh solid white;
-  height: 2vh;
-  width: 2vh;
+  height: 2.5vh;
+  width: 2.5vh;
 }
 
 .repo__action.delete {
@@ -91,7 +90,6 @@ i {
 .repo__info {
   flex-direction: column;
   width: 83%;
-  padding-top: 2vh;
 }
 
 .repo__name {
@@ -99,11 +97,30 @@ i {
   font-size: 2.5vmin;
   font-weight: normal;
   text-decoration: none;
+  height: 30%;
+  align-items: flex-end;
 }
 .repo__description {
-  margin-top: 2px;
+  padding: 2vh 0;
   font-size: 1.5vmin;
   font-weight: normal;
+  height: 40%;
+}
+
+.repo__topics {
+  height: 30%;
+}
+
+.topics__item {
+  font-size: 1.5vmin;
+  background: #F1F8FE;
+  border: 1px solid #F1F8FE;
+  border-radius: 2vh;
+  height: 70%;
+  margin-right: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2vh;
 }
 
 .repo__stats {

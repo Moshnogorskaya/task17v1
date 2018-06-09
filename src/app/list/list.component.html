@@ -7,6 +7,9 @@
     <div class='repo__info'>
       <a href={{repo.html_url}} class='repo__name'>{{repo.name}}</a>
       <p class='repo__description'>{{repo.description}}</p>
+      <ul class='repo__topics topics'>
+        <li *ngFor='let topic of repo.topics' class='topics__item'>{{topic}}</li>
+      </ul>
     </div>
 
     <div class='repo__stats'>
