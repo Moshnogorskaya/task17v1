@@ -54,10 +54,15 @@ select {
   margin: 0;
   display: flex;
   box-sizing: border-box;
+  border: 1px solid lightblue;
 }
 
 i {
   font-style: normal !important;
+}
+
+.results {
+  flex-direction: column;
 }
 
 .results__view-toggle {

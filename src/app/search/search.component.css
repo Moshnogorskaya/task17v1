@@ -64,6 +64,14 @@ select {
   align-items: center;
 }
 
+.search__criteria-group {
+  width: 100%;
+  min-height: 7vh;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 1.5vmin;
+}
+
 .select__group {
   width: 20%;
   position: relative;
@@ -86,15 +94,6 @@ select {
   align-items: center;
   justify-content: center;
 }
-
-.search__criteria-group {
-  width: 80%;
-  min-height: 7vh;
-  justify-content: space-between;
-  align-items: flex-end;
-  font-size: 1.5vmin;
-}
-
 
 .input {
   flex-direction: column;
@@ -150,7 +149,7 @@ select {
 /* results */
 
 .search__results-group {
-  width: 80%;
+  width: 100%;
   flex-direction: column;
 }
 

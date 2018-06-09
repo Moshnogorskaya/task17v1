@@ -54,44 +54,44 @@ select {
   margin: 0;
   display: flex;
   box-sizing: border-box;
-  border: 1px solid lightblue;
+  border: none;
   border-radius: 0px;
   appearance: none;
 }
 
 .my-list {
-    
+  flex-direction: column;
 }
 
+.my-list__heading {
+  height: 7vh;
+  font-weight: normal;
+  align-items: center;
+}
 
-.search__results-group {
-    width: 80%;
-    flex-direction: column;
-  }
-  
-  .no-result-group {
-    flex-direction: column;
-    height: 78.69vh;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-  }
-  .no-result-group__heading {
-    color: #0366d6;
-    font-size: 4vmin;
-  }
-  .no-result-group__text {
-    margin-top: 0.5vh;
-    font-size: 3vmin;
-    font-weight: normal;
-  }
-  .no-result-group__image {
-    position: absolute;
-    top: center;
-    left: center;
-    height: 25vh;
-    width: 25vh;
-    background: url("../../assets/github_icon.png") no-repeat;
-    background-size: contain;
-    opacity: 0.0428;
-  }
+.no-result-group {
+  flex-direction: column;
+  height: 78.69vh;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.no-result-group__heading {
+  color: #0366d6;
+  font-size: 4vmin;
+}
+.no-result-group__text {
+  margin-top: 0.5vh;
+  font-size: 3vmin;
+  font-weight: normal;
+}
+.no-result-group__image {
+  position: absolute;
+  top: center;
+  left: center;
+  height: 25vh;
+  width: 25vh;
+  background: url("../../assets/github_icon.png") no-repeat;
+  background-size: contain;
+  opacity: 0.0428;
+}
