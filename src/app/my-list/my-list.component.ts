@@ -8,15 +8,13 @@ import { Repo } from "../repo";
   styleUrls: ['./my-list.component.css']
 })
 export class MyListComponent implements OnInit {
-repos: Repo[];
+
   constructor(public repoService: RepoService) { }
 
-  ngOnInit() {
-this.repos = this.repoService.getSavedRepos();
-  }
+  ngOnInit() { }
 
   checkRepos(): boolean {
-    if (this.repos && this.repos.length) return true;
+    if (this.repoService.getSavedRepos() && this.repoService.getSavedRepos().length) return true;
     return false;
    }
 

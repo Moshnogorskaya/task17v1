@@ -9,7 +9,6 @@ import { RepoService } from "../repo.service";
   styleUrls: ["./search.component.css"]
 })
 export class SearchComponent implements OnInit {
-  repos: Repo[];
   type: string = '';
   language: string = '';
   searchTerm: string = '';
@@ -39,7 +38,7 @@ export class SearchComponent implements OnInit {
   }
 
   checkRepos(): any{
-   if (this.repos && this.repos.length) return true;
+   if (this.repoService.getFoundRepos() && this.repoService.getFoundRepos().length) return true;
    return false;
   }
 
@@ -51,12 +50,10 @@ export class SearchComponent implements OnInit {
       .getRepos(url)
       .subscribe(repos => {
         this.repoService.setRepos(repos);
-        this.repos = this.repoService.getFoundRepos();
       });
     return false;
   }
 
   ngOnInit() {
-    this.repos = this.repoService.getFoundRepos();
   }
 }
