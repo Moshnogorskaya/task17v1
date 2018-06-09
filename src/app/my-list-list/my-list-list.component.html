@@ -1,3 +1,19 @@
-<p>
-  my-list-list works!
-</p>
+<ul class='results__list'>
+  <li *ngFor="let repo of repos" class='repo'>
+
+    <div class='wrapper-repo-add'>
+      <div (click)='onClick(repo)' class='repo__add'></div>
+    </div>
+    <div class='repo__info'>
+      <h1 class='repo__name'>{{repo.name}}</h1>
+      <p class='repo__description'>{{repo.description}}</p>
+    </div>
+
+    <div class='repo__stats'>
+      <div class='repo__stars stars-group'>
+        <span class='stars-group__icon'><i class="fas fa-star"></i></span>
+        {{repo.stargazers_count}}</div>
+      <div class='repo__language'>{{repo.language}}</div>
+    </div>
+  </li>
+</ul>
