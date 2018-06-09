@@ -1,7 +1,7 @@
 <div class='my-list'>
   <h1 class='my-list__heading'>My List</h1>
-  <app-results *ngIf='checkRepos(); else noItemsToDisplay' [repos]='repos'>
-  </app-results>
+  <app-my-list-result *ngIf='checkRepos(); else noItemsToDisplay' [repos]='repos'>
+  </app-my-list-result>
   <ng-template #noItemsToDisplay>
     <div class='no-result-group'>
       <h1 class='no-result-group__heading'>NOTHING HERE</h1>

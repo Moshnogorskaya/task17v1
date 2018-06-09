@@ -1,0 +1,96 @@
+body,
+div,
+span,
+iframe,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+big,
+cite,
+code,
+em,
+img,
+ins,
+q,
+s,
+small,
+strong,
+u,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+canvas,
+footer,
+header,
+menu,
+nav,
+input,
+select {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  box-sizing: border-box;
+  border: 1px solid lightblue;
+}
+
+i {
+  font-style: normal !important;
+}
+
+.results {
+  flex-direction: column;
+}
+
+.results__view-toggle {
+  height: 10vh;
+  justify-content: flex-end;
+  font-size: 4vw;
+  font-family:'FontAwesome' !important;
+  color: #E0E0E0;
+}
+
+.view__dashboard {
+  width: 4vw;
+  justify-content: flex-end;
+  align-items: center;
+  cursor: pointer;
+  padding-top: 0.5vh;
+  margin-right: 10px;
+}
+
+.view__list {
+  width: 4vw;
+  justify-content: flex-end;
+  align-items: center;
+  cursor: pointer;
+  font-size: 4.2vw;
+}
+
+.view__dashboard.active,
+.view__list.active {
+  color: #3C4146;
+}

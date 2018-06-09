@@ -9,6 +9,9 @@ import { ResultsComponent } from './results/results.component';
 import { ListComponent } from './list/list.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MyListComponent } from './my-list/my-list.component';
+import { MyListListComponent } from './my-list-list/my-list-list.component';
+import { MyListDashboardComponent } from './my-list-dashboard/my-list-dashboard.component';
+import { MyListResultComponent } from './my-list-result/my-list-result.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { MyListComponent } from './my-list/my-list.component';
     ResultsComponent,
     ListComponent,
     DashboardComponent,
-    MyListComponent
+    MyListComponent,
+    MyListListComponent,
+    MyListDashboardComponent,
+    MyListResultComponent
   ],
   imports: [
     BrowserModule,

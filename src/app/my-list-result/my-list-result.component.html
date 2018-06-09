@@ -1,0 +1,9 @@
+<div class='results'>
+  <div class='results__view-toggle view'>
+    <a (click)='onClickTile()' class='view__dashboard'[class.active]='!isList'><i class="fas fa-th-large"></i></a>
+    <a (click)='onClickList()' class='view__list' [class.active]='isList'><i class="fas fa-bars"></i></a>
+  </div>
+
+  <app-my-list-list *ngIf='isList' [repos]='repos'></app-my-list-list>
+  <app-my-list-dashboard *ngIf='!isList' [repos]='repos'></app-my-list-dashboard>
+</div>
