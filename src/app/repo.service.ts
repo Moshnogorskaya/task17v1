@@ -24,11 +24,13 @@ export class RepoService {
 
   getRepos(url): Observable<Repo[]> {
     return this.http.get<any>(url, httpOptions).pipe(
-      map(response => response.items),
-      map(repos => {
-        repos.archived = true;
-        return repos;
-      }),
+      map(response => 
+        response.items.map(repo => {
+          repo.archived = false;
+          repo.topics = repo.topics.slice(0,5);
+          return repo;
+        })
+      ),
       tap(repos => console.log("fetched repos")),
       catchError(this.handleError("getRepos", []))
     );
