@@ -68,13 +68,13 @@ i {
 .results__view-toggle {
   height: 10vh;
   justify-content: flex-end;
-  font-size: 4vw;
+  font-size: 4vmin;
   font-family:'FontAwesome' !important;
   color: #E0E0E0;
 }
 
 .view__dashboard {
-  width: 4vw;
+  width: 4vmin;
   justify-content: flex-end;
   align-items: center;
   cursor: pointer;
@@ -83,11 +83,10 @@ i {
 }
 
 .view__list {
-  width: 4vw;
+  width: 4vmin;
   justify-content: flex-end;
   align-items: center;
   cursor: pointer;
-  font-size: 4.2vw;
 }
 
 .view__dashboard.active,
