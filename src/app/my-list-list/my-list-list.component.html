@@ -5,7 +5,7 @@
       <div (click)='deleteRepo(repo)' class='repo__delete'></div>
     </div>
     <div class='repo__info'>
-      <h1 class='repo__name'>{{repo.name}}</h1>
+      <a href={{repo.html_url}} class='repo__name'>{{repo.name}}</a>
       <p class='repo__description'>{{repo.description}}</p>
     </div>
 

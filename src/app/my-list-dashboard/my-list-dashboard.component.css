@@ -105,6 +105,7 @@ justify-content: center;
   font-weight: normal;
   height: 20%;
   align-items: flex-end;
+  text-decoration: none;
 }
 .repo__description {
   font-size: 1.7vmin;
