@@ -11,6 +11,7 @@ import { Repo } from "./repo";
 export class RepoService {
   constructor(private http: HttpClient) {}
   
+  repos = [];
   savedRepos = [];
 
   getURLString(): any {}
@@ -40,9 +41,14 @@ export class RepoService {
     return this.savedRepos;
   }
  
-  getSavedRepos() {
-    let repos = [...this.savedRepos];
+  getFoundRepos() {
+    let repos = [...this.repos];
     return repos;
+  }
+
+  getSavedRepos() {
+    let savedRepos = [...this.savedRepos];
+    return savedRepos;
   }
 
   /**
