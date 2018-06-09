@@ -56,7 +56,7 @@ select {
   box-sizing: border-box;
   outline: none;
   box-shadow: none;
-  border: 1px solid lightblue;
+  border: none;
 }
 
 .container {
@@ -116,13 +116,19 @@ select {
 .header__search-link {
   margin-right: 5%;
   align-items: center;
-  color: #ffffff;
+  color: #b3bcc7;
   text-decoration: none;
 }
 
+.header__my-list-link.active,
+.header__search-link.active {
+  color: white;
+}
+
+
 .header__my-list-link:hover,
 .header__search-link:hover {
-  color: #b3bcc7;
+  color: white;
 }
 
 .main {

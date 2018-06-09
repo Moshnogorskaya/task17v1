@@ -5,6 +5,12 @@ import { catchError, map, tap } from "rxjs/operators";
 
 import { Repo } from "./repo";
 
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Accept':  'application/vnd.github.mercy-preview+json'
+  })
+};
+
 @Injectable({
   providedIn: "root"
 })
@@ -17,7 +23,7 @@ export class RepoService {
   getURLString(): any {}
 
   getRepos(url): Observable<Repo[]> {
-    return this.http.get<any>(url).pipe(
+    return this.http.get<any>(url, httpOptions).pipe(
       map(response => response.items),
       map(repos => {
         repos.archived = false;

@@ -92,7 +92,7 @@ justify-content: center;
 .stars__icon {
   font-family:'FontAwesome' !important;
   color: #F1E05A;
-  margin-right: 5px;
+  margin-right: 7px;
   font-size: 2.5vmin;
 }
 .repo__name {

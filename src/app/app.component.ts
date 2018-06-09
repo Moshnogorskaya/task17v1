@@ -9,4 +9,15 @@ import { RepoService } from './repo.service';
 export class AppComponent {
   constructor (private repoService: RepoService) {}
   title = 'app';
+  
+  search = true;
+
+  goMyList() {
+    this.search = false;
+  }
+
+  goSearch() {
+    this.search = true;
+  }
+
 }

@@ -116,13 +116,14 @@ i {
 
 .repo__stars {
   font-size: 2vmin;
+  align-items: center;
 }
 
 .stars-group__icon {
   color: #F1E05A;
   font-family:'FontAwesome' !important;
   font-size: 2.5vmin;
-  margin-right: 2px;
+  margin-right: 7px;
 }
 
 .repo__language {
