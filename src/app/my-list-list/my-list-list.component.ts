@@ -11,14 +11,10 @@ import { RepoService } from "../repo.service";
 export class MyListListComponent implements OnInit {
 
   constructor(public repoService: RepoService) { }
-  onClick(repo: Repo) {
-    if(!repo.archived) {
-      this.repoService.addRepo(repo)   
-      repo.archived = true;
-    }else{
-      this.repoService.deleteRepo(repo)
-      repo.archived = false;
-    }
+  
+  deleteRepo(repo) {
+    this.repoService.deleteRepo(repo)
+        repo.archived = false;
   }
 
   ngOnInit() {

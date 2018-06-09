@@ -1,8 +1,8 @@
 <ul class='results__list'>
-  <li *ngFor="let repo of repos" class='repo'>
+  <li  *ngFor="let repo of repos" class='repo' [class.hidden]='!repo.archived'>
 
-    <div class='wrapper-repo-add'>
-      <div (click)='onClick(repo)' class='repo__add'></div>
+    <div class='wrapper-repo-delete'>
+      <div (click)='deleteRepo(repo)' class='repo__delete'></div>
     </div>
     <div class='repo__info'>
       <h1 class='repo__name'>{{repo.name}}</h1>
