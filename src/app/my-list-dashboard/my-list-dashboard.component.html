@@ -1,5 +1,5 @@
 <ul class='results__list'>
-  <li *ngFor="let repo of repos" class='repo'>
+  <li *ngFor="let repo of repos" class='repo' [class.hidden]='!repo.archived'>
 
     <div class='repo__stats'>
       <div class='repo__language'>{{repo.language}}</div>
@@ -14,8 +14,7 @@
     <h1 class='repo__name'>{{repo.name}}</h1>
     <p class='repo__description'>{{repo.description}}</p>
     <div class='button-wrapper'>
-      <button *ngIf='!repo.archived' (click)='addRepo(repo)' class='repo__action'>ADD TO LIST</button>
-      <button *ngIf='repo.archived' (click)='deleteRepo(repo)' class='repo__action repo__action_red'>REMOVE FROM LIST</button>
+      <button (click)='deleteRepo(repo)' class='repo__delete'>REMOVE FROM LIST</button>
     </div>
   </li>
 </ul>

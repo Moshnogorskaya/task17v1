@@ -12,11 +12,6 @@ export class MyListDashboardComponent implements OnInit {
 
   constructor(public repoService: RepoService) { }
   
-  addRepo(repo){
-    this.repoService.addRepo(repo)   
-        repo.archived = true;
-  }
-  
   deleteRepo(repo) {
     this.repoService.deleteRepo(repo)
         repo.archived = false;

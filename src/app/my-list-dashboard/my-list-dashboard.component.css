@@ -75,6 +75,10 @@ justify-content: center;
     margin: 1.5%;
 }
 
+.repo.hidden {
+  display: none;
+}
+
 .repo__stats {
   height: 20%;
   justify-content: space-between;
@@ -116,26 +120,21 @@ justify-content: center;
  justify-content: center;
  padding-top: 1vh;
 }
-.repo__action {
+.repo__delete {
   color: white;
-  background: #0366D6;
+  background: #EB5757;
   border: none;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
-  width: 35%;
+  width: 50%;
   height: 60%;
   font-weight: 100;
   font-size: 1.5vmin;
 }
 
-.repo__action_red {
-  width: 50%;
-  background: #EB5757;
-}
-
-.repo__action:focus {
+.repo__delete:focus {
   outline: none;
 }
 
-.repo__action:active {
+.repo__delete:active {
   box-shadow: none;
 }
