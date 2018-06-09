@@ -12,7 +12,10 @@
     </div>
 
     <a href={{repo.html_url}} class='repo__name'>{{repo.name}}</a>
-    <p class='repo__description'>{{repo.description}}</p>
+    <p class='repo__description' [class.big]='!repo.topics.length'>{{repo.description}}</p>
+    <ul [class.hidden]='!repo.topics.length' class='repo__topics topics'>
+      <li *ngFor='let topic of repo.topics' class='topics__item'>{{topic}}</li>
+    </ul>
     <div class='button-wrapper'>
       <button *ngIf='!repo.archived' (click)='addRepo(repo)' class='repo__action'>ADD TO LIST</button>
       <button *ngIf='repo.archived' (click)='deleteRepo(repo)' class='repo__action repo__action_red'>REMOVE FROM LIST</button>

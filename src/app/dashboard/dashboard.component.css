@@ -97,18 +97,46 @@ justify-content: center;
 }
 .repo__name {
   color: #0366D6;
-  font-size: 3vmin;
-  font-weight: normal;
-  height: 20%;
+  font-size: 2.3vmin;
+  font-weight: 600;
+  height: 15%;
   align-items: flex-end;
   text-decoration: none;
 }
 .repo__description {
   font-size: 1.7vmin;
   overflow: auto;
-  height: 35%;
+  height: 25%;
   font-weight: normal;
-  padding-top: 0.5vh;
+  padding-top: 0.7vh;
+}
+
+.repo__description.big {
+  height: 40%;
+}
+
+.repo__topics {
+  height: 15%;
+  overflow: hidden;
+  padding-top: 0.7vh;
+}
+
+.repo__topics.hidden {
+  display: none;
+}
+
+.topics__item {
+  font-size: 1.5vmin;
+  background: #F1F8FE;
+  border: 1px solid #F1F8FE;
+  border-radius: 2vh;
+  height: 50%;
+  margin-right: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2vh;
+  white-space: nowrap;
+  font-weight: normal;
 }
 
 .button-wrapper {
@@ -122,8 +150,8 @@ justify-content: center;
   background: #0366D6;
   border: none;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
-  width: 35%;
-  height: 60%;
+  width: 37%;
+  height: 55%;
   font-weight: 100;
   font-size: 1.5vmin;
 }

@@ -76,23 +76,21 @@ i {
 }
 
 .wrapper-repo-delete {
-  width: 5%;
+  width: 3%;
   padding-top: 2vh;
 }
 
 .repo__delete {
   outline: 1px solid #0366D6;
-  margin-top: 4px;
   border: 0.5vh solid white;
+  height: 2.5vh;
+  width: 2.5vh;
   background: #0366D6;
-  height: 2vh;
-  width: 2vh;
 }
 
 .repo__info {
   flex-direction: column;
   width: 83%;
-  padding-top: 2vh;
 }
 
 .repo__name {
@@ -100,11 +98,39 @@ i {
   font-size: 2.5vmin;
   font-weight: normal;
   text-decoration: none;
+  height: 30%;
+  align-items: flex-end;
 }
 .repo__description {
-  margin-top: 2px;
+  padding: 1vh 0;
   font-size: 1.5vmin;
   font-weight: normal;
+  height: 40%;
+  overflow-y: auto;
+}
+
+.repo__description.big {
+  height: 70%;
+}
+
+.repo__topics {
+  height: 30%;
+}
+
+.repo__topics.hidden {
+  display: none;
+}
+
+.topics__item {
+  font-size: 1.5vmin;
+  background: #F1F8FE;
+  border: 1px solid #F1F8FE;
+  border-radius: 2vh;
+  height: 70%;
+  margin-right: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2vh;
 }
 
 .repo__stats {

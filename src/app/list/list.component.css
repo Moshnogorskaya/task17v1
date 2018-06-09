@@ -101,14 +101,23 @@ i {
   align-items: flex-end;
 }
 .repo__description {
-  padding: 2vh 0;
+  padding: 1vh 0;
   font-size: 1.5vmin;
   font-weight: normal;
   height: 40%;
+  overflow-y: auto;
+}
+
+.repo__description.big {
+  height: 70%;
 }
 
 .repo__topics {
   height: 30%;
+}
+
+.repo__topics.hidden {
+  display: none;
 }
 
 .topics__item {

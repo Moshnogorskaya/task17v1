@@ -27,7 +27,7 @@ export class RepoService {
       map(response => 
         response.items.map(repo => {
           repo.archived = false;
-          repo.topics = repo.topics.slice(0,5);
+          repo.topics = repo.topics.slice(0,3);
           return repo;
         })
       ),
