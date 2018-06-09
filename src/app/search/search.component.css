@@ -66,7 +66,7 @@ select {
 
 .search__criteria-group {
   width: 100%;
-  min-height: 7vh;
+  height: 7vh;
   justify-content: space-between;
   align-items: flex-end;
   font-size: 1.5vmin;
@@ -75,13 +75,14 @@ select {
 .select__group {
   width: 20%;
   position: relative;
-  height: 3.5vh;
+  height: 4vh;
 }
 .select-group__select {
   z-index: 2;
   background: transparent;
   width: 100%;
   border-bottom: 1px solid #0366d6;
+  font-size: 1.5vmin;
 }
 .select-group__arrow {
   position: absolute;
@@ -104,24 +105,29 @@ select {
 
 .input__placeholder {
   font-size: 1.5vmin;
+  font-weight: normal;
   position: relative;
   top: 3.5vh;
   z-index: 1;
 }
 
 .input__placeholder.active {
+  font-size: 1.2vmin;
   color: #0366D6;
   top: 1vh;
 }
 
 .criteria__text {
-  height: 3.5vh;
+  font-size: 1.5vmin;
+  height: 4vh;
   border-bottom: 1px solid #0366d6;
   background: transparent;
   z-index: 2;
 }
 .search__button {
-  height: 3.5vh;
+  font-size: 1.5vmin;
+  font-weight: 100;
+  height: 4vh;
   width: 13%;
   background: #0366d6;
   color: white;
