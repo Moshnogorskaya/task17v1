@@ -49,10 +49,14 @@ export class SearchComponent implements OnInit {
     }language:${this.language}&sort=stars&order=desc`;
     this.repoService
       .getRepos(url)
-      .subscribe(repos => (this.repos = repos));
+      .subscribe(repos => {
+        this.repoService.setRepos(repos);
+        this.repos = this.repoService.getFoundRepos();
+      });
     return false;
   }
 
   ngOnInit() {
+    this.repos = this.repoService.getFoundRepos();
   }
 }

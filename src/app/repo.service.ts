@@ -28,6 +28,10 @@ export class RepoService {
     );
   }
 
+  setRepos(repos) {
+    return this.repos = [...repos];
+  }
+
   addRepo(repo: Repo): Repo[] {
     this.deleteRepo(repo).push(repo);
     console.log('repos after adding!', this.savedRepos);
@@ -42,13 +46,11 @@ export class RepoService {
   }
  
   getFoundRepos() {
-    let repos = [...this.repos];
-    return repos;
+    return [...this.repos];
   }
 
   getSavedRepos() {
-    let savedRepos = [...this.savedRepos];
-    return savedRepos;
+    return [...this.savedRepos];
   }
 
   /**
