@@ -26,14 +26,18 @@ i {
   padding-top: 2vh;
 }
 
-.repo__action {
+.repo__add {
   outline: 1px solid #0366d6;
   border: 0.5vh solid white;
   height: 2.5vh;
   width: 2.5vh;
 }
 
-.repo__action.delete {
+.repo__delete {
+  outline: 1px solid #0366d6;
+  border: 0.5vh solid white;
+  height: 2.5vh;
+  width: 2.5vh;
   background: #0366d6;
 }
 

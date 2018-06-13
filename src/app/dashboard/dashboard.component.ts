@@ -1,6 +1,4 @@
 import { Component, OnInit } from "@angular/core";
-import { Repo } from "../repo";
-import { RepoService } from "../repo.service";
 
 @Component({
   selector: "app-dashboard",
@@ -9,17 +7,7 @@ import { RepoService } from "../repo.service";
   styleUrls: ["./dashboard.component.css"]
 })
 export class DashboardComponent implements OnInit {
-  constructor(public repoService: RepoService) {}
-
-  addRepo(repo: Repo): void {
-    this.repoService.addRepo(repo);
-    repo.archived = true;
-  }
-
-  deleteRepo(repo: Repo): void {
-    this.repoService.deleteRepo(repo);
-    repo.archived = false;
-  }
+  constructor() {}
 
   ngOnInit() {}
 }

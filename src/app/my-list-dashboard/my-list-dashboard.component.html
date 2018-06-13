@@ -17,7 +17,7 @@
       <li *ngFor='let topic of repo.topics' class='topics__item'>{{topic}}</li>
     </ul>
     <div class='button-wrapper'>
-      <button (click)='deleteRepo(repo)' class='repo__delete'>REMOVE FROM LIST</button>
+      <button [appUpdateRepos]='repo' class='repo__delete'>REMOVE FROM LIST</button>
     </div>
   </li>
 </ul>

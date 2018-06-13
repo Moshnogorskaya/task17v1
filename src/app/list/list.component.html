@@ -2,7 +2,7 @@
   <li *ngFor="let repo of repos" class='repo'>
 
     <div class='wrapper-repo-action'>
-      <div (click)='onClick(repo)' class='repo__action' [class.delete]='repo.archived'></div>
+      <div [appUpdateRepos]='repo' [class]='repo.archived? "repo__delete": "repo__add"'></div>
     </div>
     <div class='repo__info'>
       <a href={{repo.html_url}} class='repo__name'>{{repo.name}}</a>

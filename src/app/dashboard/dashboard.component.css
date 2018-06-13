@@ -95,7 +95,7 @@ i {
   justify-content: center;
   padding-top: 1vh;
 }
-.repo__action {
+.repo__add {
   color: white;
   background: #0366d6;
   border: none;
@@ -106,15 +106,23 @@ i {
   font-size: 1.5vmin;
 }
 
-.repo__action_red {
-  width: 50%;
+.repo__delete {
+  color: white;
   background: #eb5757;
+  border: none;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
+  width: 50%;
+  height: 55%;
+  font-weight: 100;
+  font-size: 1.5vmin;
 }
 
-.repo__action:focus {
+.repo__add:focus,
+.repo__delete:focus {
   outline: none;
 }
 
-.repo__action:active {
+.repo__add:active,
+.repo__delete:active {
   box-shadow: none;
 }
