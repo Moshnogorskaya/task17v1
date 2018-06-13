@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { RepoService } from "../repo.service";
+import { SavedService } from "../saved.service";
 import { Repo } from "../repo";
 
 @Component({
@@ -8,14 +8,14 @@ import { Repo } from "../repo";
   styleUrls: ["./my-list.component.css"]
 })
 export class MyListComponent implements OnInit {
-  constructor(public repoService: RepoService) {}
+  constructor(public savedService: SavedService) {}
 
   ngOnInit() {}
 
   checkRepos(): boolean {
     if (
-      this.repoService.getSavedRepos() &&
-      this.repoService.getSavedRepos().length
+      this.savedService.getSavedRepos() &&
+      this.savedService.getSavedRepos().length
     )
       return true;
     return false;

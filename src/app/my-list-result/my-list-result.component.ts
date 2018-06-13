@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Repo } from "../repo";
-import { RepoService } from "../repo.service";
+import { SavedService } from "../saved.service";
 
 @Component({
   selector: "app-my-list-result",
@@ -18,9 +18,9 @@ export class MyListResultComponent implements OnInit {
     return this.isList = false;
   }
 
-  constructor(private repoService: RepoService) {}
+  constructor(private savedService: SavedService) {}
   ngOnInit() {
-    this.repos = this.repoService.getSavedRepos();
+    this.repos = this.savedService.getSavedRepos();
     this.onClickList();
   }
 }

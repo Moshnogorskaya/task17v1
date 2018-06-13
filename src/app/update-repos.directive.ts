@@ -1,5 +1,5 @@
 import { Directive, HostListener, Input, ElementRef } from '@angular/core';
-import { RepoService } from "../app/repo.service";
+import { SavedService } from "../app/saved.service";
 import { Repo } from "../app/repo";
 
 @Directive({
@@ -7,17 +7,17 @@ import { Repo } from "../app/repo";
 })
 export class UpdateReposDirective {
 
-  constructor(public repoService: RepoService, private el: ElementRef) { }
+  constructor(public savedService: SavedService, private el: ElementRef) { }
 
   @Input('appUpdateRepos') repo: Repo;
 
   @HostListener('click') onClick() {
 if (this.el.nativeElement.className === 'repo__delete') {
-  this.repoService.deleteRepo(this.repo);
+  this.savedService.deleteRepo(this.repo);
   this.repo.archived = false;
   
 } else if (this.el.nativeElement.className === 'repo__add') {
-  this.repoService.addRepo(this.repo);
+  this.savedService.addRepo(this.repo);
     this.repo.archived = true;
 }
   }

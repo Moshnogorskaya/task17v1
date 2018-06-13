@@ -18,7 +18,6 @@ export class RepoService {
   constructor(private http: HttpClient) {}
   
   private repos: Repo[] = [];
-  private savedRepos: Repo[] = [];
 
   getRepos(url: string): Observable<Repo[]> {
     return this.http.get<any>(url, httpOptions).pipe(
@@ -37,26 +36,9 @@ export class RepoService {
   setRepos(repos: Repo[]): Repo[] {
     return this.repos = [...repos];
   }
-
-  addRepo(repo: Repo): Repo[] {
-    this.deleteRepo(repo).push(repo);
-    console.log('repos after adding!', this.savedRepos);
-    return this.savedRepos;
-  }
-  
-  deleteRepo(repo: Repo): Repo[] {
-    let oldRepos = [...this.savedRepos];
-    this.savedRepos = oldRepos.filter(item => item.id !== repo.id);
-    console.log('repos after deleting!', this.savedRepos);
-    return this.savedRepos;
-  }
  
   getFoundRepos(): Repo[] {
     return [...this.repos];
-  }
-
-  getSavedRepos(): Repo[] {
-    return [...this.savedRepos];
   }
 
   /**
