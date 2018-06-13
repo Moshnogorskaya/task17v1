@@ -11,13 +11,13 @@
     </div>
 
     <div class=nav-group>
-      <a routerLink="/search" [class.active]='search'  (click)='goSearch()' class='header__search-link'>Search</a>
+      <a routerLink="/search" [class.active]='search' (click)='goSearch()' class='header__search-link'>Search</a>
       <a routerLink="/my-list" [class.active]='!search' (click)='goMyList()' class='header__my-list-link'>My List</a>
     </div>
   </div>
-<div class='main'>
-  <router-outlet></router-outlet>
-</div>
+  <div class='main'>
+    <router-outlet></router-outlet>
+  </div>
   <div class='footer'>copyright @lodossteam 2018</div>
 
 </div>

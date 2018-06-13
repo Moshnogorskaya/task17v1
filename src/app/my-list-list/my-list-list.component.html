@@ -1,5 +1,5 @@
 <ul class='results__list'>
-  <li  *ngFor="let repo of repos" class='repo' [class.hidden]='!repo.archived'>
+  <li *ngFor="let repo of repos" class='repo' [class.hidden]='!repo.archived'>
 
     <div class='wrapper-repo-delete'>
       <div (click)='deleteRepo(repo)' class='repo__delete'></div>
@@ -14,7 +14,9 @@
 
     <div class='repo__stats'>
       <div class='repo__stars stars-group'>
-        <span class='stars-group__icon'><i class="fas fa-star"></i></span>
+        <span class='stars-group__icon'>
+          <i class="fas fa-star"></i>
+        </span>
         {{repo.stargazers_count}}</div>
       <div class='repo__language'>{{repo.language}}</div>
     </div>

@@ -17,12 +17,10 @@ const httpOptions = {
 export class RepoService {
   constructor(private http: HttpClient) {}
   
-  repos = [];
-  savedRepos = [];
+  private repos: Repo[] = [];
+  private savedRepos: Repo[] = [];
 
-  getURLString(): any {}
-
-  getRepos(url): Observable<Repo[]> {
+  getRepos(url: string): Observable<Repo[]> {
     return this.http.get<any>(url, httpOptions).pipe(
       map(response => 
         response.items.map(repo => {
@@ -36,7 +34,7 @@ export class RepoService {
     );
   }
 
-  setRepos(repos) {
+  setRepos(repos: Repo[]): Repo[] {
     return this.repos = [...repos];
   }
 
@@ -53,11 +51,11 @@ export class RepoService {
     return this.savedRepos;
   }
  
-  getFoundRepos() {
+  getFoundRepos(): Repo[] {
     return [...this.repos];
   }
 
-  getSavedRepos() {
+  getSavedRepos(): Repo[] {
     return [...this.savedRepos];
   }
 

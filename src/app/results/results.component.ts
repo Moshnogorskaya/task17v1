@@ -1,25 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-results',
-  inputs: ['repos'],
-  templateUrl: './results.component.html',
-  styleUrls: ['./results.component.css']
+  selector: "app-results",
+  inputs: ["repos"],
+  templateUrl: "./results.component.html",
+  styleUrls: ["./results.component.css"]
 })
 export class ResultsComponent implements OnInit {
+  isList: boolean;
 
-  isList: boolean = true;
-
-  onClickList(): any {
-    this.isList = true;
-    console.log('list!', 'islist =', this.isList)
+  onClickList(): boolean {
+    return this.isList = true;
   }
-  onClickTile(): any {
-    this.isList = false;
-    console.log('tile!', 'islist =', this.isList)
+  onClickTile(): boolean {
+    return this.isList = false;
   }
 
-  constructor() { }
+  constructor() {}
   ngOnInit() {
     this.onClickList();
   }
