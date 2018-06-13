@@ -1,14 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { Repo } from "../repo";
-import { RepoService } from "../repo.service";
 
 @Component({
   selector: 'app-results',
+  inputs: ['repos'],
   templateUrl: './results.component.html',
   styleUrls: ['./results.component.css']
 })
 export class ResultsComponent implements OnInit {
-repos = [];
+
   isList: boolean = true;
 
   onClickList(): any {
@@ -20,10 +19,8 @@ repos = [];
     console.log('tile!', 'islist =', this.isList)
   }
 
-  constructor(private repoService: RepoService) {}
-
+  constructor() { }
   ngOnInit() {
-    this.repos = this.repoService.getFoundRepos();
     this.onClickList();
   }
 }
