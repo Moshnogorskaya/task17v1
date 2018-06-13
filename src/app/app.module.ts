@@ -12,6 +12,7 @@ import { MyListComponent } from "./my-list/my-list.component";
 import { MyListListComponent } from "./my-list-list/my-list-list.component";
 import { MyListDashboardComponent } from "./my-list-dashboard/my-list-dashboard.component";
 import { MyListResultComponent } from "./my-list-result/my-list-result.component";
+import { UpdateReposDirective } from './update-repos.directive';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { MyListResultComponent } from "./my-list-result/my-list-result.component
     MyListComponent,
     MyListListComponent,
     MyListDashboardComponent,
-    MyListResultComponent
+    MyListResultComponent,
+    UpdateReposDirective
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
