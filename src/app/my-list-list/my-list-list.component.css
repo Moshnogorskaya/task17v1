@@ -1,54 +1,4 @@
-body,
-div,
-iframe,
-a,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-big,
-cite,
-code,
-em,
-img,
-ins,
-q,
-s,
-small,
-strong,
-u,
-i,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-canvas,
-footer,
-header,
-menu,
-nav,
-input,
-select {
+div, a, h1, p, ul, li, form, input, select {
   padding: 0;
   margin: 0;
   display: flex;
@@ -81,11 +31,11 @@ i {
 }
 
 .repo__delete {
-  outline: 1px solid #0366D6;
+  outline: 1px solid #0366d6;
   border: 0.5vh solid white;
   height: 2.5vh;
   width: 2.5vh;
-  background: #0366D6;
+  background: #0366d6;
 }
 
 .repo__info {
@@ -123,8 +73,8 @@ i {
 
 .topics__item {
   font-size: 1.5vmin;
-  background: #F1F8FE;
-  border: 1px solid #F1F8FE;
+  background: #f1f8fe;
+  border: 1px solid #f1f8fe;
   border-radius: 2vh;
   height: 70%;
   margin-right: 10px;
@@ -146,8 +96,8 @@ i {
 }
 
 .stars-group__icon {
-  color: #F1E05A;
-  font-family:'FontAwesome' !important;
+  color: #f1e05a;
+  font-family: "FontAwesome" !important;
   font-size: 2.5vmin;
   margin-right: 7px;
 }

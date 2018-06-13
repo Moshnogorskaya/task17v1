@@ -1,54 +1,4 @@
-body,
-div,
-iframe,
-a,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-big,
-cite,
-code,
-em,
-img,
-ins,
-q,
-s,
-small,
-strong,
-u,
-i,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-canvas,
-footer,
-header,
-menu,
-nav,
-input,
-select {
+div, a, h1, p, ul, li, form, input, select {
   padding: 0;
   margin: 0;
   display: flex;
@@ -61,18 +11,18 @@ i {
 }
 
 .results__list {
-flex-wrap: wrap;
-justify-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .repo {
-    width: 40%;
-    height: 35vh;
-    flex-direction: column;
-    padding: 0 3% 0 3%;
-    border: 1px solid #E0E0E0;
-    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
-    margin: 1.5%;
+  width: 40%;
+  height: 35vh;
+  flex-direction: column;
+  padding: 0 3% 0 3%;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
+  margin: 1.5%;
 }
 
 .repo.hidden {
@@ -88,19 +38,19 @@ justify-content: center;
   font-size: 1.5vmin;
   align-items: center;
 }
-.repo__stars{
+.repo__stars {
   font-size: 2vmin;
   align-items: center;
 }
 
 .stars__icon {
-  font-family:'FontAwesome' !important;
-  color: #F1E05A;
+  font-family: "FontAwesome" !important;
+  color: #f1e05a;
   margin-right: 7px;
   font-size: 2.5vmin;
 }
 .repo__name {
-  color: #0366D6;
+  color: #0366d6;
   font-size: 2.3vmin;
   font-weight: 600;
   height: 15%;
@@ -131,8 +81,8 @@ justify-content: center;
 
 .topics__item {
   font-size: 1.5vmin;
-  background: #F1F8FE;
-  border: 1px solid #F1F8FE;
+  background: #f1f8fe;
+  border: 1px solid #f1f8fe;
   border-radius: 2vh;
   height: 50%;
   margin-right: 10px;
@@ -145,13 +95,13 @@ justify-content: center;
 
 .button-wrapper {
   height: 25%;
- align-items: flex-start;
- justify-content: center;
- padding-top: 1vh;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 1vh;
 }
 .repo__delete {
   color: white;
-  background: #EB5757;
+  background: #eb5757;
   border: none;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
   width: 50%;

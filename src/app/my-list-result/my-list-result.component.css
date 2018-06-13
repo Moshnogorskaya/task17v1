@@ -1,60 +1,9 @@
-body,
-div,
-span,
-iframe,
-a,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-big,
-cite,
-code,
-em,
-img,
-ins,
-q,
-s,
-small,
-strong,
-u,
-i,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-canvas,
-footer,
-header,
-menu,
-nav,
-input,
-select {
+div, a, h1, p, ul, li, form, input, select {
   padding: 0;
   margin: 0;
   display: flex;
   box-sizing: border-box;
-  border: 1px solid lightblue;
+  border: none;
 }
 
 i {
@@ -70,8 +19,8 @@ i {
   height: 10vh;
   justify-content: flex-end;
   font-size: 4vmin;
-  font-family:'FontAwesome' !important;
-  color: #E0E0E0;
+  font-family: "FontAwesome" !important;
+  color: #e0e0e0;
 }
 
 .view__dashboard {
@@ -92,5 +41,5 @@ i {
 
 .view__dashboard.active,
 .view__list.active {
-  color: #3C4146;
+  color: #3c4146;
 }
