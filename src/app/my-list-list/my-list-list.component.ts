@@ -1,6 +1,4 @@
 import { Component, OnInit } from "@angular/core";
-import { Repo } from "../repo";
-import { RepoService } from "../repo.service";
 
 @Component({
   selector: "app-my-list-list",
@@ -9,12 +7,7 @@ import { RepoService } from "../repo.service";
   styleUrls: ["./my-list-list.component.css"]
 })
 export class MyListListComponent implements OnInit {
-  constructor(public repoService: RepoService) {}
-
-  deleteRepo(repo: Repo): void {
-    this.repoService.deleteRepo(repo);
-    repo.archived = false;
-  }
+  constructor() {}
 
   ngOnInit() {}
 }
