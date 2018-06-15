@@ -128,7 +128,7 @@ div, a, h1, p, ul, li, form, input, select {
   left: center;
   height: 25vh;
   width: 25vh;
-  background: url("../../assets/github_icon.png") no-repeat;
+  background: url("../../../assets/github_icon.png") no-repeat;
   background-size: contain;
   opacity: 0.0428;
 }
