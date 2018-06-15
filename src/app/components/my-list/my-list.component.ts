@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SavedService } from '../saved.service';
+import { SavedService } from '../../saved.service';
 
 @Component({
   selector: 'app-my-list',

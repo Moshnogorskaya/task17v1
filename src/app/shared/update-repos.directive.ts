@@ -1,6 +1,6 @@
 import { Directive, HostListener, Input, ElementRef } from '@angular/core';
-import { SavedService } from '../app/saved.service';
-import { Repo } from '../app/repo';
+import { SavedService } from '../../app/saved.service';
+import { Repo } from '../../app/repo';
 
 @Directive({
   selector: '[appUpdateRepos]'
