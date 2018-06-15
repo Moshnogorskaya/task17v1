@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Repo } from '../../repo';
-import { RepoService } from '../../repo.service';
+import { Repo } from '../../../shared/repo';
+import { RepoService } from '../../../shared/repo.service';
 
 @Component({
   selector: 'app-search',

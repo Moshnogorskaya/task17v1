@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Repo } from '../repo';
-import { SavedService } from '../saved.service';
+import { Repo } from '../../../shared/repo';
+import { SavedService } from '../../../shared/saved.service';
 
 @Component({
   selector: 'app-my-list-result',

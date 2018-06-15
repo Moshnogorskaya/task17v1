@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Repo } from './repo';
+import { Repo } from './../shared/repo';
 
 @Injectable({
   providedIn: 'root'

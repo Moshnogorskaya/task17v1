@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SearchComponent } from '../components/search/search.component';
-import { MyListComponent } from '../components/my-list/my-list.component';
+import { SearchComponent } from '../components/search-page/search/search.component';
+import { MyListComponent } from '../components/my-list-page/my-list/my-list.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/search', pathMatch: 'full' },
