@@ -3,7 +3,7 @@ import { Observable, of } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators';
 
-import { Repo } from './../shared/repo';
+import { Repo } from './../../../shared/repo';
 
 const httpOptions = {
   headers: new HttpHeaders({

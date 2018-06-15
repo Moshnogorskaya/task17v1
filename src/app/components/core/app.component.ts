@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { RepoService } from '../../shared/repo.service';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +6,7 @@ import { RepoService } from '../../shared/repo.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(private repoService: RepoService) {}
+  constructor() {}
   title = 'app';
 
   search = true;

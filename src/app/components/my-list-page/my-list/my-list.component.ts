@@ -7,7 +7,7 @@ import { SavedService } from '../../../shared/saved.service';
   styleUrls: ['./my-list.component.css']
 })
 export class MyListComponent implements OnInit {
-  constructor(public savedService: SavedService) {}
+  constructor(private savedService: SavedService) {}
 
   ngOnInit() {}
 
