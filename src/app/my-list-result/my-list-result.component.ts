@@ -1,15 +1,15 @@
-import { Component, OnInit } from "@angular/core";
-import { Repo } from "../repo";
-import { SavedService } from "../saved.service";
+import { Component, OnInit } from '@angular/core';
+import { Repo } from '../repo';
+import { SavedService } from '../saved.service';
 
 @Component({
-  selector: "app-my-list-result",
-  templateUrl: "./my-list-result.component.html",
-  styleUrls: ["./my-list-result.component.css"]
+  selector: 'app-my-list-result',
+  templateUrl: './my-list-result.component.html',
+  styleUrls: ['./my-list-result.component.css']
 })
 export class MyListResultComponent implements OnInit {
   repos: Repo[];
-  isList: boolean = true;
+  isList = true;
 
   onClickList(): boolean {
     return this.isList = true;

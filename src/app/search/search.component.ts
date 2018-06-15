@@ -1,18 +1,18 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
 
-import { Repo } from "../repo";
-import { RepoService } from "../repo.service";
+import { Repo } from '../repo';
+import { RepoService } from '../repo.service';
 
 @Component({
-  selector: "app-search",
-  templateUrl: "./search.component.html",
-  styleUrls: ["./search.component.css"]
+  selector: 'app-search',
+  templateUrl: './search.component.html',
+  styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
   repos: Repo[];
-  type: string = "";
-  language: string = "";
-  searchTerm: string = "";
+  type = '';
+  language = '';
+  searchTerm = '';
   textInputActive = false;
 
   constructor(private repoService: RepoService) {}
@@ -22,7 +22,9 @@ export class SearchComponent implements OnInit {
   }
 
   isNotActive(value): boolean {
-    if (!(value && value.length)) return (this.textInputActive = false);
+    if (!(value && value.length)) {
+      return (this.textInputActive = false);
+    }
   }
 
   updateType(value: string): string {
@@ -30,22 +32,27 @@ export class SearchComponent implements OnInit {
   }
 
   updateLanguage(value: string): string {
-    if (value !== "Language") return (this.language = value.toLowerCase());
+    if (value !== 'Language') {
+      return (this.language = value.toLowerCase());
+    }
   }
 
   updateSearchTerm(value: string): string {
-    if (value && value.length)
+    if (value && value.length) {
       return (this.searchTerm = `${value.toLowerCase()}+`);
-    return (this.searchTerm = "");
+    }
+    return (this.searchTerm = '');
   }
 
   checkRepos(): boolean {
-    if (this.repos && this.repos.length) return true;
+    if (this.repos && this.repos.length) {
+      return true;
+    }
     return false;
   }
 
   getRepos(): boolean {
-    let url = `https://api.github.com/search/${this.type}?q=${
+    const url = `https://api.github.com/search/${this.type}?q=${
       this.searchTerm
     }language:${this.language}&sort=stars&order=desc`;
     this.repoService.getRepos(url).subscribe(repos => {

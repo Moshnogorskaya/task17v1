@@ -1,12 +1,11 @@
 import { Injectable } from '@angular/core';
-import { Repo } from "./repo";
+import { Repo } from './repo';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SavedService {
-
-  constructor() { }
+  constructor() {}
 
   private savedRepos: Repo[] = [];
 
@@ -14,9 +13,9 @@ export class SavedService {
     this.deleteRepo(repo).push(repo);
     return this.savedRepos;
   }
-  
+
   deleteRepo(repo: Repo): Repo[] {
-    let oldRepos = [...this.savedRepos];
+    const oldRepos = [...this.savedRepos];
     this.savedRepos = oldRepos.filter(item => item.id !== repo.id);
     return this.savedRepos;
   }

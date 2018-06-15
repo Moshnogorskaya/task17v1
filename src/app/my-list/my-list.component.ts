@@ -1,11 +1,10 @@
-import { Component, OnInit } from "@angular/core";
-import { SavedService } from "../saved.service";
-import { Repo } from "../repo";
+import { Component, OnInit } from '@angular/core';
+import { SavedService } from '../saved.service';
 
 @Component({
-  selector: "app-my-list",
-  templateUrl: "./my-list.component.html",
-  styleUrls: ["./my-list.component.css"]
+  selector: 'app-my-list',
+  templateUrl: './my-list.component.html',
+  styleUrls: ['./my-list.component.css']
 })
 export class MyListComponent implements OnInit {
   constructor(public savedService: SavedService) {}
@@ -16,8 +15,10 @@ export class MyListComponent implements OnInit {
     if (
       this.savedService.getSavedRepos() &&
       this.savedService.getSavedRepos().length
-    )
+    ) {
       return true;
+    }
+
     return false;
   }
 }

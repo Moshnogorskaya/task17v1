@@ -1,16 +1,16 @@
-import { Component } from "@angular/core";
-import { RepoService } from "./repo.service";
+import { Component } from '@angular/core';
+import { RepoService } from './repo.service';
 
 @Component({
-  selector: "app-root",
-  templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.css"]
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   constructor(private repoService: RepoService) {}
-  title = "app";
+  title = 'app';
 
-  search: boolean = true;
+  search = true;
 
   goMyList() {
     this.search = false;
